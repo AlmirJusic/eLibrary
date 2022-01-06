@@ -3,6 +3,9 @@
 
 using eLibrary;
 using eLibrary.Database;
+using eLibrary.Model.Requests.Drzava;
+using eLibrary.Services.Interfaces;
+using eLibrary.Services.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -40,6 +43,10 @@ namespace eLibrary
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "eLibrary", Version = "v1" });
             });
+
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddScoped<ICRUDService<eLibrary.Model.Drzava, DrzavaSearchRequest, DrzavaInsertRequest, DrzavaInsertRequest>, DrzavaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
