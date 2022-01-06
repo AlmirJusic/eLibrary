@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace eLibrary.Database.Models
+{
+    public class KupovinaKnjige
+    {
+        [Key]
+        public int KupovinaKnjige_ID { get; set; }
+        public DateTime DatumKupovine { get; set; }
+
+        [ForeignKey(nameof(Korisnik))]
+        public int Korisnik_ID { get; set; }
+        public virtual Korisnik Korisnik { get; set; }
+
+        [ForeignKey(nameof(Knjiga))]
+        public int Knjiga_ID { get; set; }
+        public virtual Knjiga Knjiga { get; set; }
+
+        [ForeignKey(nameof(Placanje))]
+        public int Placanje_ID { get; set; }
+        public virtual Placanje Placanje { get; set; }
+
+        public bool? Odobreno { get; set; }
+
+    }
+}
