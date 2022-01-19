@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eLibrary.Model.Requests.Drzava
+namespace eLibrary.Model
 {
-    public class DrzavaSearchRequest
+    public class Spol
     {
-        public string? NazivDrzave { get; set; }
+        public int Spol_ID { get; set; }
+        public string OznakaSpola { get; set; }
     }
 }

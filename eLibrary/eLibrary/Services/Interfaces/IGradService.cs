@@ -1,0 +1,12 @@
+﻿using eLibrary.Model.Requests.Grad;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace eLibrary.Services.Interfaces
+{
+    public interface IGradService : ICRUDService<Model.Grad, GradSearchRequest, GradInsertRequest, GradInsertRequest>
+    {
+    }
+}

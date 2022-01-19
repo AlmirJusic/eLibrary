@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eLibrary.Model.Requests.Drzava
+namespace eLibrary.Model.Requests.Knjiga
 {
-    public class DrzavaSearchRequest
+    public class KnjigaSearchRequest
     {
-        public string? NazivDrzave { get; set; }
+        public string? NazivKnjige { get; set; }
+
     }
 }
