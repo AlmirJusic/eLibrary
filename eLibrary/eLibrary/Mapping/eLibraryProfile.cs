@@ -35,6 +35,32 @@ namespace eLibrary.Mapping
             //Korisnik
             CreateMap<Korisnik, Model.Requests.Korisnik.KorisnikInsertRequest>().ReverseMap();
             CreateMap<Korisnik, Model.Korisnik>().ReverseMap();
+            //KnjigaPisac
+            CreateMap<KnjigaPisac, Model.Requests.KnjigaPisac.KnjigaPisacRequest>().ReverseMap();
+            CreateMap<KnjigaPisac, Model.KnjigaPisac>().ReverseMap();
+            //KnjigaPisac
+            CreateMap<KnjigaZanr, Model.Requests.KnjigaZanr.KnjigaZanrRequest>().ReverseMap();
+            CreateMap<KnjigaZanr, Model.KnjigaZanr>().ReverseMap();
+            //KorisnikKnjigaKomentar
+            CreateMap<KorisnikKnjigaKomentar, Model.Requests.KorisnikKnjigaKomentar.KorisnikKnjigaKomentarRequest>().ReverseMap();
+            CreateMap<KorisnikKnjigaKomentar, Model.KorisnikKnjigaKomentar>().ReverseMap();
+            //KorisnikKnjigaOcjena
+            CreateMap<KorisnikKnjigaOcjena, Model.Requests.KorisnikKnjigaOcjena.KorisnikKnjigaOcjenaRequest>().ReverseMap();
+            CreateMap<KorisnikKnjigaOcjena, Model.KorisnikKnjigaOcjena>().ReverseMap();
+            //NacinPlacanja
+            CreateMap<NacinPlacanja, Model.Requests.NacinPlacanja.NacinPlacanjaInsertRequest>().ReverseMap();
+            CreateMap<NacinPlacanja, Model.NacinPlacanja>().ReverseMap();
+            //Placanje
+            CreateMap<Placanje, Model.Requests.Placanje.PlacanjeInsertRequest>().ReverseMap();
+            CreateMap<Placanje, Model.Placanje>().ReverseMap();
+            //KupovinaKnjige
+            CreateMap<KupovinaKnjige, Model.Requests.KupovinaKnjige.KupovinaKnjigeInsertRequest>().ReverseMap();
+            CreateMap<KupovinaKnjige, Model.KupovinaKnjige>().ReverseMap();
+            //PrijedlogKnjige
+            CreateMap<PrijedlogKnjige, Model.Requests.PrijedlogKnjige.PrijedlogKnjigeInsertRequest>().ReverseMap();
+            CreateMap<PrijedlogKnjige, Model.PrijedlogKnjige>().ReverseMap();
+
+
         }
     }
 }

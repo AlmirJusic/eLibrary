@@ -176,7 +176,7 @@ namespace eLibrary.Database
             modelBuilder.Entity<KorisnikKnjigaKomentar>().HasData(
                 new KorisnikKnjigaKomentar
                 {
-                    Komentar_ID = 1,
+                    KorisnikKnjigaKomentar_ID = 1,
                     Korisnik_ID = 2,
                     Knjiga_ID = 3,
                     DatumKomentara = DateTime.Now,
@@ -184,7 +184,7 @@ namespace eLibrary.Database
                 },
                 new KorisnikKnjigaKomentar
                 {
-                    Komentar_ID = 2,
+                    KorisnikKnjigaKomentar_ID = 2,
                     Korisnik_ID = 2,
                     Knjiga_ID = 2,
                     DatumKomentara = DateTime.Now,
@@ -192,7 +192,7 @@ namespace eLibrary.Database
                 },
                 new KorisnikKnjigaKomentar
                 {
-                    Komentar_ID = 3,
+                    KorisnikKnjigaKomentar_ID = 3,
                     Korisnik_ID = 2,
                     Knjiga_ID = 1,
                     DatumKomentara = DateTime.Now,

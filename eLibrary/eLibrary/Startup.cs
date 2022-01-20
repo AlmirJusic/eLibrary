@@ -28,6 +28,14 @@ using eLibrary.Model.Requests.Pisac;
 using eLibrary.Model.Requests.Knjiga;
 using Microsoft.AspNetCore.Authentication;
 using eLibrary.Security;
+using eLibrary.Model.Requests.KnjigaPisac;
+using eLibrary.Model.Requests.KnjigaZanr;
+using eLibrary.Model.Requests.KorisnikKnjigaKomentar;
+using eLibrary.Model.Requests.KorisnikKnjigaOcjena;
+using eLibrary.Model.Requests.NacinPlacanja;
+using eLibrary.Model.Requests.Placanje;
+using eLibrary.Model.Requests.KupovinaKnjige;
+using eLibrary.Model.Requests.PrijedlogKnjige;
 
 namespace eLibrary
 {
@@ -87,11 +95,21 @@ namespace eLibrary
             services.AddScoped<ICRUDService<eLibrary.Model.Grad, GradSearchRequest, GradInsertRequest, GradInsertRequest>, GradService>();
             services.AddScoped<ICRUDService<eLibrary.Model.Zanr, ZanrSearchRequest, ZanrInsertRequest, ZanrInsertRequest>, ZanrService>();
             services.AddScoped<ICRUDService<eLibrary.Model.Uloga, UlogaSearchRequest, UlogaInsertRequest, UlogaInsertRequest>, UlogaService>();
-            services.AddScoped<ICRUDService<Model.Spol, Model.Spol, Model.Spol, Model.Spol>, BaseCRUDService<Model.Spol, Model.Spol, eLibrary.Database.Models.Spol, Model.Spol, Model.Spol>>();
+            services.AddScoped<ICRUDService<eLibrary.Model.Spol, eLibrary.Model.Spol, eLibrary.Model.Spol, eLibrary.Model.Spol>, BaseCRUDService<eLibrary.Model.Spol, eLibrary.Model.Spol, eLibrary.Database.Models.Spol, eLibrary.Model.Spol, eLibrary.Model.Spol>>();
             services.AddScoped<ICRUDService<eLibrary.Model.Pisac, PisacSearchRequest, PisacInsertRequest, PisacInsertRequest>, PisacService>();
             services.AddScoped<ICRUDService<eLibrary.Model.Knjiga, KnjigaSearchRequest, KnjigaInsertRequest, KnjigaInsertRequest>, KnjigaService>();
             services.AddScoped<IKorisnikService, KorisnikService>();
+            services.AddScoped<ICRUDService<eLibrary.Model.KnjigaPisac, eLibrary.Model.KnjigaPisac, KnjigaPisacRequest, KnjigaPisacRequest>, BaseCRUDService<eLibrary.Model.KnjigaPisac, eLibrary.Model.KnjigaPisac, eLibrary.Database.Models.KnjigaPisac,KnjigaPisacRequest,KnjigaPisacRequest>>();
+            services.AddScoped<ICRUDService<eLibrary.Model.KnjigaZanr, eLibrary.Model.KnjigaZanr, KnjigaZanrRequest, KnjigaZanrRequest>, BaseCRUDService<eLibrary.Model.KnjigaZanr, eLibrary.Model.KnjigaZanr, eLibrary.Database.Models.KnjigaZanr, KnjigaZanrRequest, KnjigaZanrRequest>>();
+            services.AddScoped<ICRUDService<eLibrary.Model.KorisnikKnjigaKomentar, KorisnikKnjigaKomentarRequest, KorisnikKnjigaKomentarRequest, KorisnikKnjigaKomentarRequest>, BaseCRUDService<eLibrary.Model.KorisnikKnjigaKomentar, KorisnikKnjigaKomentarRequest, eLibrary.Database.Models.KorisnikKnjigaKomentar, KorisnikKnjigaKomentarRequest, KorisnikKnjigaKomentarRequest>>();
+            services.AddScoped<ICRUDService<eLibrary.Model.KorisnikKnjigaOcjena, eLibrary.Model.KorisnikKnjigaOcjena, KorisnikKnjigaOcjenaRequest, KorisnikKnjigaOcjenaRequest>, BaseCRUDService<eLibrary.Model.KorisnikKnjigaOcjena, eLibrary.Model.KorisnikKnjigaOcjena, eLibrary.Database.Models.KorisnikKnjigaOcjena, KorisnikKnjigaOcjenaRequest, KorisnikKnjigaOcjenaRequest>>();
+            services.AddScoped<ICRUDService<eLibrary.Model.NacinPlacanja, NacinPlacanjaSearchRequest, NacinPlacanjaInsertRequest, NacinPlacanjaInsertRequest>, NacinPlacanjaService>();
+            services.AddScoped<ICRUDService<eLibrary.Model.Placanje, PlacanjeSearchRequest,PlacanjeInsertRequest, PlacanjeInsertRequest>, PlacanjeService>();
+            services.AddScoped<ICRUDService<eLibrary.Model.KupovinaKnjige, KupovinaKnjigeSearchRequest, KupovinaKnjigeInsertRequest, KupovinaKnjigeInsertRequest>, KupovinaKnjigeService>();
+            services.AddScoped<ICRUDService<eLibrary.Model.PrijedlogKnjige, PrijedlogKnjigeSearchRequest, PrijedlogKnjigeInsertRequest, PrijedlogKnjigeInsertRequest>, PrijedlogKnjigeService>();
+
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -106,6 +124,8 @@ namespace eLibrary
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
