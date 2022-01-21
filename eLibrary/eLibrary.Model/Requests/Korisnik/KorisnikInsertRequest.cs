@@ -16,11 +16,12 @@ namespace eLibrary.Model.Requests.Korisnik
         public string Email { get; set; }
         public DateTime DatumRodjenja { get; set; }
         public int Grad_ID { get; set; }
+        public virtual eLibrary.Model.Grad Grad { get; set; }
         public int Spol_ID { get; set; }
         public int Uloga_ID { get; set; }
 
         public string Username { get; set; }
-        public string PasswordHash { get; set; }
+        public string Password { get; set; }
         public string PasswordConfirm { get; set; }
 
     }

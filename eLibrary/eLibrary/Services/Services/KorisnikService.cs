@@ -105,7 +105,7 @@ namespace eLibrary.Services.Services
             db.Add(k);
 
 
-            if (request.PasswordHash != request.PasswordConfirm)
+            if (request.Password != request.PasswordConfirm)
             {
                 throw new System.Exception("Lozinka i potvrda se ne slažu");
             }
