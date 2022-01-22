@@ -69,7 +69,8 @@ namespace eLibrary.WinUI.Forms.Drzave
                 }
                 MessageBox.Show("Operacija uspješna!");
                 this.Close();
-                _dgvDrzave.DataSource = await _drzave.Get<List<Model.Drzava>>(null);
+                if(_dgvDrzave!=null)
+                    _dgvDrzave.DataSource = await _drzave.Get<List<Model.Drzava>>(null);
             }
         }
         
@@ -81,9 +82,6 @@ namespace eLibrary.WinUI.Forms.Drzave
                 return false;
             }
             else errorProvider1.Clear();
-
-            
-           
 
             return true;
         }

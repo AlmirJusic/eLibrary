@@ -67,7 +67,7 @@ namespace eLibrary.WinUI.Forms.Drzava
 
                     frmDrzaveAdd frm = new frmDrzaveAdd(dgvDrzave,item.Drzava_ID);
                     frm.ShowDialog();
-                    dgvDrzave.DataSource = await _drzave.Get<List<Model.Drzava>>(null);
+                    
                 }
             }
 

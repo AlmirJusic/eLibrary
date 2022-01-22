@@ -9,5 +9,6 @@ namespace eLibrary.Model.Requests.Grad
     public class GradSearchRequest
     {
         public string? NazivGrada { get; set; }
+        public string? NazivDrzave { get; set; }
     }
 }

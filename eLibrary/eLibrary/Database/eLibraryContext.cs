@@ -11,6 +11,10 @@ namespace eLibrary.Database
     {
         public eLibraryContext(DbContextOptions<eLibraryContext> options) : base(options){ }
 
+        public eLibraryContext()
+        {
+        }
+
         public DbSet<Drzava> Drzava { get; set; }
         public DbSet<Grad> Grad { get; set; }
         public DbSet<Knjiga> Knjiga { get; set; }

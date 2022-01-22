@@ -13,6 +13,7 @@ namespace eLibrary.Model
         public string NazivGrada { get; set; }
 
         public int Drzava_ID { get; set; }
-        public virtual Drzava Drzava { get; set; }
+        public virtual Drzava  Drzava { get; set; }
+        
     }
 }

@@ -39,6 +39,10 @@ namespace eLibrary.WinUI
             this.dodajKorisnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drzaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prikazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajDrzavuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gradoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledGradovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajGradToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +68,8 @@ namespace eLibrary.WinUI
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.korisniciToolStripMenuItem,
-            this.drzaveToolStripMenuItem});
+            this.drzaveToolStripMenuItem,
+            this.gradoviToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -98,7 +103,8 @@ namespace eLibrary.WinUI
             // drzaveToolStripMenuItem
             // 
             this.drzaveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.prikazToolStripMenuItem});
+            this.prikazToolStripMenuItem,
+            this.dodajDrzavuToolStripMenuItem});
             this.drzaveToolStripMenuItem.Name = "drzaveToolStripMenuItem";
             this.drzaveToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.drzaveToolStripMenuItem.Text = "Drzave";
@@ -106,9 +112,39 @@ namespace eLibrary.WinUI
             // prikazToolStripMenuItem
             // 
             this.prikazToolStripMenuItem.Name = "prikazToolStripMenuItem";
-            this.prikazToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prikazToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.prikazToolStripMenuItem.Text = "Pregled drzava";
             this.prikazToolStripMenuItem.Click += new System.EventHandler(this.prikazToolStripMenuItem_Click);
+            // 
+            // dodajDrzavuToolStripMenuItem
+            // 
+            this.dodajDrzavuToolStripMenuItem.Name = "dodajDrzavuToolStripMenuItem";
+            this.dodajDrzavuToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.dodajDrzavuToolStripMenuItem.Text = "Dodaj drzavu";
+            this.dodajDrzavuToolStripMenuItem.Click += new System.EventHandler(this.dodajDrzavuToolStripMenuItem_Click);
+            // 
+            // gradoviToolStripMenuItem
+            // 
+            this.gradoviToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pregledGradovaToolStripMenuItem,
+            this.dodajGradToolStripMenuItem});
+            this.gradoviToolStripMenuItem.Name = "gradoviToolStripMenuItem";
+            this.gradoviToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.gradoviToolStripMenuItem.Text = "Gradovi";
+            // 
+            // pregledGradovaToolStripMenuItem
+            // 
+            this.pregledGradovaToolStripMenuItem.Name = "pregledGradovaToolStripMenuItem";
+            this.pregledGradovaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.pregledGradovaToolStripMenuItem.Text = "Pregled gradova";
+            this.pregledGradovaToolStripMenuItem.Click += new System.EventHandler(this.pregledGradovaToolStripMenuItem_Click);
+            // 
+            // dodajGradToolStripMenuItem
+            // 
+            this.dodajGradToolStripMenuItem.Name = "dodajGradToolStripMenuItem";
+            this.dodajGradToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.dodajGradToolStripMenuItem.Text = "Dodaj grad";
+            this.dodajGradToolStripMenuItem.Click += new System.EventHandler(this.dodajGradToolStripMenuItem_Click);
             // 
             // frmIndex
             // 
@@ -142,6 +178,10 @@ namespace eLibrary.WinUI
         private System.Windows.Forms.ToolStripMenuItem dodajKorisnikaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drzaveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prikazToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gradoviToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pregledGradovaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajGradToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajDrzavuToolStripMenuItem;
     }
 }
 

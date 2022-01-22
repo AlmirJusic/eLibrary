@@ -1,4 +1,6 @@
 ﻿using eLibrary.WinUI.Forms.Drzava;
+using eLibrary.WinUI.Forms.Drzave;
+using eLibrary.WinUI.Forms.Gradovi;
 using eLibrary.WinUI.Forms.Korisnici;
 using System;
 using System.Collections.Generic;
@@ -116,6 +118,27 @@ namespace eLibrary.WinUI
         private void prikazToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDrzave frm = new frmDrzave();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void pregledGradovaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGradovi frm = new frmGradovi();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void dodajGradToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGradoviAdd frm = new frmGradoviAdd();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void dodajDrzavuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDrzaveAdd frm = new frmDrzaveAdd();
             frm.MdiParent = this;
             frm.Show();
         }
