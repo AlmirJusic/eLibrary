@@ -15,6 +15,8 @@ namespace eLibrary.Model.Requests.Korisnik
         public int Grad_ID { get; set; }
         public int Spol_ID { get; set; }
         public int Uloga_ID { get; set; }
+        public byte[] Slika { get; set; }
+        
 
         public string Username { get; set; }
     }

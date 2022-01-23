@@ -10,5 +10,9 @@ namespace eLibrary.Model
     {
         public int Spol_ID { get; set; }
         public string OznakaSpola { get; set; }
+        public override string ToString()
+        {
+            return OznakaSpola;
+        }
     }
 }

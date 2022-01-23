@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -307,22 +308,39 @@ namespace eLibrary.Database
                      Uloga_ID = 1,
                      Username = "admin",
                      Grad_ID = 1,
-                     PasswordHash = "/",
-                     PasswordSalt = "/"
+                     Slika= File.ReadAllBytes("Assets/user1.jpg"),
+                     PasswordHash = "VBuAbDHw4VpNmit99/1kQD6iHdc=",
+                     PasswordSalt = "vlB5aDodOZ9CzpJgJb2YTw=="
                  },
                  new Korisnik
                  {
                      Korisnik_ID = 2,
                      Spol_ID = 1,
                      DatumRodjenja = DateTime.Now,
-                     Email = "almirjusic@edu.fit.ba",
+                     Email = "korisnik@gmail.com",
+                     Ime = "Korisnik",
+                     Prezime = "Korisnik",
+                     Uloga_ID = 2,
+                     Username = "korisnik",
+                     Grad_ID = 3,
+                     Slika = File.ReadAllBytes("Assets/user2.jpg"),
+                     PasswordHash = "cfYKzFiOX9/2wn+uO0D+eQpVC6Q=",
+                     PasswordSalt = "xgZcl8UKsYKT6W/UVNAQ5A=="
+                 },
+                 new Korisnik
+                 {
+                     Korisnik_ID = 3,
+                     Spol_ID = 1,
+                     DatumRodjenja = DateTime.Now,
+                     Email = "almir.jusic@edu.fit.ba",
                      Ime = "Almir",
                      Prezime = "Jusic",
-                     Uloga_ID = 2,
-                     Username = "almirjusic",
-                     Grad_ID = 2,
-                     PasswordHash = "/",
-                     PasswordSalt = "/"
+                     Uloga_ID = 1,
+                     Username = "almir",
+                     Grad_ID = 3,
+                     Slika = File.ReadAllBytes("Assets/user3.jpg"),
+                     PasswordHash = "Uc6V3AKyDPojPD7/DUOOgxj/J4g=",
+                     PasswordSalt = "4WBY01YbHGSswAHe68uTBg=="
                  }
                  );
         }

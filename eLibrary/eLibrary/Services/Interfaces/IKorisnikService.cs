@@ -19,6 +19,7 @@ namespace eLibrary.Services.Interfaces
 
         public Model.Korisnik Authenticiraj(string username, string pass);
 
-        bool Remove(int id);
+        public  void Delete(int id);
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using eLibrary.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace eLibrary.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class BaseController<T, TSearch> : ControllerBase

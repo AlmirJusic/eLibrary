@@ -9,6 +9,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace eLibrary.Services.Services
 {
@@ -28,7 +29,7 @@ namespace eLibrary.Services.Services
 
         public List<Model.Korisnik> Get(KorisnikSearchRequest search)
         {
-            var query = db.Korisnik.AsQueryable();
+            var query = db.Korisnik.Include(x => x.Grad).Include(x => x.Spol).Include(x => x.Uloga).AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(search?.Ime))
             {
@@ -42,6 +43,14 @@ namespace eLibrary.Services.Services
             {
                 query = query.Where(x => x.Username.ToLower().Contains(search.Username.ToLower()));
             }
+            if (!string.IsNullOrWhiteSpace(search?.Uloga_ID.ToString()))
+            {
+                query = query.Where(x => x.Uloga_ID == search.Uloga_ID);
+            }
+            
+
+
+
 
 
             var list = query.ToList();
@@ -65,16 +74,16 @@ namespace eLibrary.Services.Services
         }
         public static string GenerateHash(string salt, string password)
         {
-            byte[] src = System.Convert.FromBase64String(salt);
-            byte[] bytes = System.Text.Encoding.Unicode.GetBytes(password);
+            byte[] src = Convert.FromBase64String(salt);
+            byte[] bytes = Encoding.Unicode.GetBytes(password);
             byte[] dst = new byte[src.Length + bytes.Length];
 
             System.Buffer.BlockCopy(src, 0, dst, 0, src.Length);
             System.Buffer.BlockCopy(bytes, 0, dst, src.Length, bytes.Length);
 
-            HashAlgorithm algorithm = HashAlgorithm.Create("SHA512");
+            HashAlgorithm algorithm = HashAlgorithm.Create("SHA1");
             byte[] inArray = algorithm.ComputeHash(dst);
-            return System.Convert.ToBase64String(inArray);
+            return Convert.ToBase64String(inArray);
         }
 
         public Model.Korisnik Authenticiraj(string username, string password)
@@ -93,8 +102,6 @@ namespace eLibrary.Services.Services
             return null;
         }
 
-
-        //***************************************//
         public Model.Korisnik Insert(KorisnikInsertRequest request)
         {
 
@@ -111,7 +118,7 @@ namespace eLibrary.Services.Services
             }
 
             k.PasswordSalt = GenerateSalt();
-            k.PasswordHash = GenerateHash(k.PasswordSalt, k.PasswordHash);
+            k.PasswordHash = GenerateHash(k.PasswordSalt, request.Password);
 
             db.SaveChanges();
 
@@ -121,9 +128,6 @@ namespace eLibrary.Services.Services
             return mapper.Map<eLibrary.Model.Korisnik>(k);
         }
 
-
-
-        //***************************************//
 
         public Model.Korisnik Update(int id, KorisnikUpdateRequest request)
         {
@@ -137,6 +141,9 @@ namespace eLibrary.Services.Services
             k.Uloga_ID = request.Uloga_ID;
             k.Email = request.Email;
             k.DatumRodjenja = request.DatumRodjenja;
+            k.Slika = request.Slika;
+            
+           
 
 
 
@@ -145,26 +152,14 @@ namespace eLibrary.Services.Services
 
         }
 
-        public bool Remove(int id)
+        public void Delete(int id)
         {
             var entity = db.Korisnik.Find(id);
-            if (entity != null)
-            {
-                db.Korisnik.Remove(entity);
-                db.SaveChanges();
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            db.Remove(entity);
+            db.SaveChanges();
 
         }
 
-
     }
-
-
-
 }
 

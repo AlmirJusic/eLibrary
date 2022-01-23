@@ -14,6 +14,7 @@ namespace eLibrary.WinUI.API
     {
         public static string Username { get; set; }
         public static string Password { get; set; }
+        public static Korisnik LogiraniKorisnik { get; set; }
         private string _route = null;
         public APIService(string route)
         {
@@ -22,7 +23,9 @@ namespace eLibrary.WinUI.API
         public async Task<T> Get<T>(object searchrequest)
         {
             var url = $"{Properties.Settings.Default.ApiURL}/{_route}";
-            if(searchrequest!=null)
+            
+
+            if (searchrequest!=null)
             {
                 url += "?";
                 url += await searchrequest.ToQueryString();

@@ -1,3 +1,4 @@
+using eLibrary.WinUI.Forms;
 using eLibrary.WinUI.Forms.Korisnici;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace eLibrary.WinUI
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmIndex());
+            Application.Run(new frmLogin());
         }
     }
 }

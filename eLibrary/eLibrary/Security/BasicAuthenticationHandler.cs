@@ -18,8 +18,8 @@ namespace eLibrary.Security
 
 
 
-        public static Model.Korisnik PrijavljeniKlijent;
-        private readonly IKorisnikService _klijentservice;
+        public static Model.Korisnik LogiraniKorisnik;
+        private readonly IKorisnikService _korisnikService;
 
 
 
@@ -28,13 +28,13 @@ namespace eLibrary.Security
                 ILoggerFactory logger,
                 UrlEncoder encoder,
                 ISystemClock clock,
-                IKorisnikService klijentservice
+                IKorisnikService korisnikService
                 )
                 : base(options, logger, encoder, clock)
         {
 
 
-            _klijentservice = klijentservice;
+            _korisnikService = korisnikService;
 
 
         }
@@ -53,7 +53,7 @@ namespace eLibrary.Security
                 var username = credentials[0];
                 var password = credentials[1];
 
-                PrijavljeniKlijent = _klijentservice.Authenticiraj(username, password);
+                LogiraniKorisnik = _korisnikService.Authenticiraj(username, password);
 
 
             }
@@ -62,15 +62,15 @@ namespace eLibrary.Security
                 return AuthenticateResult.Fail("Invalid Authorization Header");
             }
 
-            if (PrijavljeniKlijent == null)
+            if (LogiraniKorisnik == null)
                 return AuthenticateResult.Fail("Invalid Username or Password");
 
 
 
 
             var claims = new List<Claim> {
-                new Claim(ClaimTypes.NameIdentifier, PrijavljeniKlijent.Username),
-                new Claim(ClaimTypes.Name, PrijavljeniKlijent.Ime),
+                new Claim(ClaimTypes.NameIdentifier, LogiraniKorisnik.Username),
+                new Claim(ClaimTypes.Name, LogiraniKorisnik.Ime),
 
 
 
@@ -79,7 +79,7 @@ namespace eLibrary.Security
 
 
 
-            claims.Add(new Claim(ClaimTypes.Role, PrijavljeniKlijent.Uloga.NazivUloge));
+            claims.Add(new Claim(ClaimTypes.Role, LogiraniKorisnik.Uloga.NazivUloge));
 
 
             //var identity = new ClaimsIdentity(claims, Scheme.Name);

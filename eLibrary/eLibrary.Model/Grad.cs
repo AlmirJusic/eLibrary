@@ -14,6 +14,11 @@ namespace eLibrary.Model
 
         public int Drzava_ID { get; set; }
         public virtual Drzava  Drzava { get; set; }
-        
+
+        public override string ToString()
+        {
+            return NazivGrada;
+        }
+
     }
 }

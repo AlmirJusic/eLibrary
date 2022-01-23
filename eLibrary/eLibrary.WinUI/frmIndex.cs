@@ -1,4 +1,5 @@
-﻿using eLibrary.WinUI.Forms.Drzava;
+﻿using eLibrary.WinUI.Forms;
+using eLibrary.WinUI.Forms.Drzava;
 using eLibrary.WinUI.Forms.Drzave;
 using eLibrary.WinUI.Forms.Gradovi;
 using eLibrary.WinUI.Forms.Korisnici;
@@ -141,6 +142,18 @@ namespace eLibrary.WinUI
             frmDrzaveAdd frm = new frmDrzaveAdd();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void odjaviSeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin frm = new frmLogin();
+            this.Close();
+            frm.Show();
+        }
+
+        private void frmIndex_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Application.Exit();
         }
     }
 }

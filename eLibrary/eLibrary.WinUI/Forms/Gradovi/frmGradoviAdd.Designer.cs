@@ -57,12 +57,12 @@ namespace eLibrary.WinUI.Forms.Gradovi
             // 
             // cmbDrzava
             // 
+            this.cmbDrzava.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDrzava.FormattingEnabled = true;
             this.cmbDrzava.Location = new System.Drawing.Point(25, 90);
             this.cmbDrzava.Name = "cmbDrzava";
             this.cmbDrzava.Size = new System.Drawing.Size(246, 23);
             this.cmbDrzava.TabIndex = 2;
-            
             // 
             // btnSpremi
             // 
@@ -98,6 +98,7 @@ namespace eLibrary.WinUI.Forms.Gradovi
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNazivGrada);
             this.Name = "frmGradoviAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGradAdd";
             this.Load += new System.EventHandler(this.frmGradoviAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

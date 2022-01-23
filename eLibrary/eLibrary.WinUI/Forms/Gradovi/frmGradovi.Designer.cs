@@ -160,7 +160,6 @@ namespace eLibrary.WinUI.Forms.Gradovi
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pretraga";
-            
             // 
             // label2
             // 
@@ -185,6 +184,7 @@ namespace eLibrary.WinUI.Forms.Gradovi
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmGradovi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGradovi";
             this.Load += new System.EventHandler(this.frmGradovi_Load);
             this.groupBox1.ResumeLayout(false);

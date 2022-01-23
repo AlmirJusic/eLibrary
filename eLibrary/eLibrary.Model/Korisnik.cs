@@ -13,6 +13,7 @@ namespace eLibrary.Model
         public string Prezime { get; set; }
         public string Email { get; set; }
         public DateTime DatumRodjenja { get; set; }
+        public byte[] Slika { get; set; }
 
         public int Spol_ID { get; set; }
         public virtual Spol Spol { get; set; }

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace eLibrary.Controllers
 {
-
+    
     [Route("api/[controller]")]
     [ApiController]
     public class KorisnikController : ControllerBase
@@ -23,7 +23,7 @@ namespace eLibrary.Controllers
             _service = service;
         }
 
-
+        
         [HttpGet]
         public List<Model.Korisnik> Get([FromQuery] KorisnikSearchRequest request)
         {
@@ -31,33 +31,32 @@ namespace eLibrary.Controllers
         }
 
 
+        
         [HttpPost]
-
         public Model.Korisnik Insert(KorisnikInsertRequest request)
         {
             return _service.Insert(request);
         }
 
-
         [HttpDelete("{id}")]
-        public bool Remove(int id)
+        public void Delete(int id)
         {
-            return _service.Remove(id);
+            _service.Delete(id);
         }
 
-
+        [Authorize]
         [HttpPut("{id}")]
         public Model.Korisnik Update(int id, [FromBody] KorisnikUpdateRequest request)
         {
             return _service.Update(id, request);
         }
-
+        [Authorize]
         [HttpGet("{id}")]
         public Model.Korisnik GetById(int id)
         {
             return _service.GetbyId(id);
         }
-
+        
 
     }
 }

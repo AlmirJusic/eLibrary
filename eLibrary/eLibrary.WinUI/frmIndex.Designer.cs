@@ -43,6 +43,7 @@ namespace eLibrary.WinUI
             this.gradoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledGradovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajGradToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.odjaviSeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +70,8 @@ namespace eLibrary.WinUI
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.korisniciToolStripMenuItem,
             this.drzaveToolStripMenuItem,
-            this.gradoviToolStripMenuItem});
+            this.gradoviToolStripMenuItem,
+            this.odjaviSeToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -146,10 +148,18 @@ namespace eLibrary.WinUI
             this.dodajGradToolStripMenuItem.Text = "Dodaj grad";
             this.dodajGradToolStripMenuItem.Click += new System.EventHandler(this.dodajGradToolStripMenuItem_Click);
             // 
+            // odjaviSeToolStripMenuItem
+            // 
+            this.odjaviSeToolStripMenuItem.Name = "odjaviSeToolStripMenuItem";
+            this.odjaviSeToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.odjaviSeToolStripMenuItem.Text = "Odjavi se";
+            this.odjaviSeToolStripMenuItem.Click += new System.EventHandler(this.odjaviSeToolStripMenuItem_Click);
+            // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::eLibrary.WinUI.Properties.Resources.old_book_flying_letters_magic_light_background_bookshelf_library_ancient_books_as_symbol_knowledge_history_218640948;
             this.ClientSize = new System.Drawing.Size(948, 590);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
@@ -157,8 +167,10 @@ namespace eLibrary.WinUI
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmIndex";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmIndex";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmIndex_FormClosed);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
@@ -182,6 +194,7 @@ namespace eLibrary.WinUI
         private System.Windows.Forms.ToolStripMenuItem pregledGradovaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajGradToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajDrzavuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem odjaviSeToolStripMenuItem;
     }
 }
 

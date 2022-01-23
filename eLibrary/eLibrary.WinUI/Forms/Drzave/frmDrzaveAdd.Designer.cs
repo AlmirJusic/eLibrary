@@ -76,7 +76,7 @@ namespace eLibrary.WinUI.Forms.Drzave
             this.Controls.Add(this.txtNazivDrzave);
             this.Controls.Add(this.btnSpremi);
             this.Name = "frmDrzaveAdd";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDrzaveAdd";
             this.Load += new System.EventHandler(this.frmDrzaveAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

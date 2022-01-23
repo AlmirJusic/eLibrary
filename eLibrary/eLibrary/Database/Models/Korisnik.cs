@@ -13,6 +13,8 @@ namespace eLibrary.Database.Models
         public string Email { get; set; }
         public DateTime DatumRodjenja { get; set; }
 
+        public byte[]? Slika { get; set; }
+
         [ForeignKey(nameof(Spol))]
         public int Spol_ID { get; set; }
         public virtual Spol Spol { get; set; }

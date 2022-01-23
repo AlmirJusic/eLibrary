@@ -11,5 +11,10 @@ namespace eLibrary.Model
         public int Uloga_ID { get; set; }
         public string NazivUloge { get; set; }
         public string Opis { get; set; }
+
+        public override string ToString()
+        {
+            return NazivUloge;
+        }
     }
 }

@@ -36,16 +36,19 @@ namespace eLibrary.WinUI.Forms.Drzava
             this.Uredi = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtPretraga = new System.Windows.Forms.TextBox();
             this.btnDodajDrzavu = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrzave)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvDrzave);
-            this.groupBox1.Location = new System.Drawing.Point(17, 55);
+            this.groupBox1.Location = new System.Drawing.Point(38, 105);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(375, 307);
+            this.groupBox1.Size = new System.Drawing.Size(400, 327);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Države:";
@@ -66,7 +69,7 @@ namespace eLibrary.WinUI.Forms.Drzava
             this.dgvDrzave.ReadOnly = true;
             this.dgvDrzave.RowTemplate.Height = 25;
             this.dgvDrzave.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDrzave.Size = new System.Drawing.Size(369, 285);
+            this.dgvDrzave.Size = new System.Drawing.Size(394, 305);
             this.dgvDrzave.TabIndex = 0;
             this.dgvDrzave.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDrzave_CellContentClick);
             // 
@@ -98,7 +101,7 @@ namespace eLibrary.WinUI.Forms.Drzava
             // 
             // txtPretraga
             // 
-            this.txtPretraga.Location = new System.Drawing.Point(17, 22);
+            this.txtPretraga.Location = new System.Drawing.Point(7, 46);
             this.txtPretraga.Name = "txtPretraga";
             this.txtPretraga.Size = new System.Drawing.Size(162, 23);
             this.txtPretraga.TabIndex = 1;
@@ -106,7 +109,7 @@ namespace eLibrary.WinUI.Forms.Drzava
             // 
             // btnDodajDrzavu
             // 
-            this.btnDodajDrzavu.Location = new System.Drawing.Point(220, 21);
+            this.btnDodajDrzavu.Location = new System.Drawing.Point(229, 45);
             this.btnDodajDrzavu.Name = "btnDodajDrzavu";
             this.btnDodajDrzavu.Size = new System.Drawing.Size(172, 23);
             this.btnDodajDrzavu.TabIndex = 2;
@@ -114,21 +117,43 @@ namespace eLibrary.WinUI.Forms.Drzava
             this.btnDodajDrzavu.UseVisualStyleBackColor = true;
             this.btnDodajDrzavu.Click += new System.EventHandler(this.btnDodajDrzavu_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtPretraga);
+            this.groupBox2.Controls.Add(this.btnDodajDrzavu);
+            this.groupBox2.Location = new System.Drawing.Point(31, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(407, 86);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Pretraga";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 15);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Naziv države:";
+            // 
             // frmDrzave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 412);
-            this.Controls.Add(this.btnDodajDrzavu);
-            this.Controls.Add(this.txtPretraga);
+            this.ClientSize = new System.Drawing.Size(468, 448);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDrzave";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDrzave";
             this.Load += new System.EventHandler(this.frmDrzave_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrzave)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -141,5 +166,7 @@ namespace eLibrary.WinUI.Forms.Drzava
         private System.Windows.Forms.DataGridViewTextBoxColumn NazivDrzave;
         private System.Windows.Forms.DataGridViewButtonColumn Izbrisi;
         private System.Windows.Forms.DataGridViewButtonColumn Uredi;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label1;
     }
 }
