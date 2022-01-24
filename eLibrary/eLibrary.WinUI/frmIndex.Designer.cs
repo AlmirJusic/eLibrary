@@ -43,7 +43,10 @@ namespace eLibrary.WinUI
             this.gradoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledGradovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajGradToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.žanroviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledŽanrovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odjaviSeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajŽanrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +74,7 @@ namespace eLibrary.WinUI
             this.korisniciToolStripMenuItem,
             this.drzaveToolStripMenuItem,
             this.gradoviToolStripMenuItem,
+            this.žanroviToolStripMenuItem,
             this.odjaviSeToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -137,16 +141,32 @@ namespace eLibrary.WinUI
             // pregledGradovaToolStripMenuItem
             // 
             this.pregledGradovaToolStripMenuItem.Name = "pregledGradovaToolStripMenuItem";
-            this.pregledGradovaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.pregledGradovaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pregledGradovaToolStripMenuItem.Text = "Pregled gradova";
             this.pregledGradovaToolStripMenuItem.Click += new System.EventHandler(this.pregledGradovaToolStripMenuItem_Click);
             // 
             // dodajGradToolStripMenuItem
             // 
             this.dodajGradToolStripMenuItem.Name = "dodajGradToolStripMenuItem";
-            this.dodajGradToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.dodajGradToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dodajGradToolStripMenuItem.Text = "Dodaj grad";
             this.dodajGradToolStripMenuItem.Click += new System.EventHandler(this.dodajGradToolStripMenuItem_Click);
+            // 
+            // žanroviToolStripMenuItem
+            // 
+            this.žanroviToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pregledŽanrovaToolStripMenuItem,
+            this.dodajŽanrToolStripMenuItem});
+            this.žanroviToolStripMenuItem.Name = "žanroviToolStripMenuItem";
+            this.žanroviToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.žanroviToolStripMenuItem.Text = "Žanrovi";
+            // 
+            // pregledŽanrovaToolStripMenuItem
+            // 
+            this.pregledŽanrovaToolStripMenuItem.Name = "pregledŽanrovaToolStripMenuItem";
+            this.pregledŽanrovaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pregledŽanrovaToolStripMenuItem.Text = "Pregled žanrova";
+            this.pregledŽanrovaToolStripMenuItem.Click += new System.EventHandler(this.pregledŽanrovaToolStripMenuItem_Click);
             // 
             // odjaviSeToolStripMenuItem
             // 
@@ -154,6 +174,13 @@ namespace eLibrary.WinUI
             this.odjaviSeToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.odjaviSeToolStripMenuItem.Text = "Odjavi se";
             this.odjaviSeToolStripMenuItem.Click += new System.EventHandler(this.odjaviSeToolStripMenuItem_Click);
+            // 
+            // dodajŽanrToolStripMenuItem
+            // 
+            this.dodajŽanrToolStripMenuItem.Name = "dodajŽanrToolStripMenuItem";
+            this.dodajŽanrToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajŽanrToolStripMenuItem.Text = "Dodaj žanr";
+            this.dodajŽanrToolStripMenuItem.Click += new System.EventHandler(this.dodajŽanrToolStripMenuItem_Click);
             // 
             // frmIndex
             // 
@@ -195,6 +222,9 @@ namespace eLibrary.WinUI
         private System.Windows.Forms.ToolStripMenuItem dodajGradToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajDrzavuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem odjaviSeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem žanroviToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pregledŽanrovaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajŽanrToolStripMenuItem;
     }
 }
 

@@ -3,6 +3,7 @@ using eLibrary.WinUI.Forms.Drzava;
 using eLibrary.WinUI.Forms.Drzave;
 using eLibrary.WinUI.Forms.Gradovi;
 using eLibrary.WinUI.Forms.Korisnici;
+using eLibrary.WinUI.Forms.Zanrovi;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -154,6 +155,20 @@ namespace eLibrary.WinUI
         private void frmIndex_FormClosed(object sender, FormClosedEventArgs e)
         {
             //Application.Exit();
+        }
+
+        private void pregledŽanrovaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmZanrovi frm = new frmZanrovi();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void dodajŽanrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmZanroviAdd frm = new frmZanroviAdd();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }
