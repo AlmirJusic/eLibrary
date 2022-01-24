@@ -85,6 +85,7 @@ namespace eLibrary.WinUI.Forms.Korisnici
 
             var result = await _korisnici.Get<List<Model.Korisnik>>(search);
             dgvKorisnici.DataSource = result;
+
         }
 
         private async void dgvKorisnici_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -120,8 +121,8 @@ namespace eLibrary.WinUI.Forms.Korisnici
                 {
 
                     await _korisnici.Delete<Model.Korisnik>(item.Korisnik_ID);
-                    dgvKorisnici.DataSource = await _korisnici.Get<List<Model.Korisnik>>(null);
-
+                    //dgvKorisnici.DataSource = await _korisnici.Get<List<Model.Korisnik>>(null);
+                    await LoadKorisnici();
 
                 }
                 else if (result == DialogResult.No)

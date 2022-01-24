@@ -3,6 +3,7 @@ using eLibrary.WinUI.Forms.Drzava;
 using eLibrary.WinUI.Forms.Drzave;
 using eLibrary.WinUI.Forms.Gradovi;
 using eLibrary.WinUI.Forms.Korisnici;
+using eLibrary.WinUI.Forms.Pisci;
 using eLibrary.WinUI.Forms.Zanrovi;
 using System;
 using System.Collections.Generic;
@@ -167,6 +168,20 @@ namespace eLibrary.WinUI
         private void dodajŽanrToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmZanroviAdd frm = new frmZanroviAdd();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void pregledajPisceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPisci frm = new frmPisci();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void dodajPiscaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPisciAdd frm = new frmPisciAdd();
             frm.MdiParent = this;
             frm.Show();
         }

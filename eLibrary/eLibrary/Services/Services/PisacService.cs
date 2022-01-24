@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using eLibrary.Database;
 using eLibrary.Model.Requests.Pisac;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace eLibrary.Services.Services
         }
         public override List<eLibrary.Model.Pisac> Get(PisacSearchRequest search)
         {
-            var query = _db.Pisac.AsQueryable();
+            var query = _db.Pisac.Include(x=>x.Grad).AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(search?.Ime))
             {

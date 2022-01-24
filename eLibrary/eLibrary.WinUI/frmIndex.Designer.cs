@@ -45,8 +45,11 @@ namespace eLibrary.WinUI
             this.dodajGradToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.žanroviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledŽanrovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.odjaviSeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajŽanrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pisciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledajPisceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajPiscaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.odjaviSeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +78,7 @@ namespace eLibrary.WinUI
             this.drzaveToolStripMenuItem,
             this.gradoviToolStripMenuItem,
             this.žanroviToolStripMenuItem,
+            this.pisciToolStripMenuItem,
             this.odjaviSeToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -141,14 +145,14 @@ namespace eLibrary.WinUI
             // pregledGradovaToolStripMenuItem
             // 
             this.pregledGradovaToolStripMenuItem.Name = "pregledGradovaToolStripMenuItem";
-            this.pregledGradovaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pregledGradovaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.pregledGradovaToolStripMenuItem.Text = "Pregled gradova";
             this.pregledGradovaToolStripMenuItem.Click += new System.EventHandler(this.pregledGradovaToolStripMenuItem_Click);
             // 
             // dodajGradToolStripMenuItem
             // 
             this.dodajGradToolStripMenuItem.Name = "dodajGradToolStripMenuItem";
-            this.dodajGradToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajGradToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.dodajGradToolStripMenuItem.Text = "Dodaj grad";
             this.dodajGradToolStripMenuItem.Click += new System.EventHandler(this.dodajGradToolStripMenuItem_Click);
             // 
@@ -164,9 +168,39 @@ namespace eLibrary.WinUI
             // pregledŽanrovaToolStripMenuItem
             // 
             this.pregledŽanrovaToolStripMenuItem.Name = "pregledŽanrovaToolStripMenuItem";
-            this.pregledŽanrovaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pregledŽanrovaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.pregledŽanrovaToolStripMenuItem.Text = "Pregled žanrova";
             this.pregledŽanrovaToolStripMenuItem.Click += new System.EventHandler(this.pregledŽanrovaToolStripMenuItem_Click);
+            // 
+            // dodajŽanrToolStripMenuItem
+            // 
+            this.dodajŽanrToolStripMenuItem.Name = "dodajŽanrToolStripMenuItem";
+            this.dodajŽanrToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.dodajŽanrToolStripMenuItem.Text = "Dodaj žanr";
+            this.dodajŽanrToolStripMenuItem.Click += new System.EventHandler(this.dodajŽanrToolStripMenuItem_Click);
+            // 
+            // pisciToolStripMenuItem
+            // 
+            this.pisciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pregledajPisceToolStripMenuItem,
+            this.dodajPiscaToolStripMenuItem});
+            this.pisciToolStripMenuItem.Name = "pisciToolStripMenuItem";
+            this.pisciToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.pisciToolStripMenuItem.Text = "Pisci";
+            // 
+            // pregledajPisceToolStripMenuItem
+            // 
+            this.pregledajPisceToolStripMenuItem.Name = "pregledajPisceToolStripMenuItem";
+            this.pregledajPisceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pregledajPisceToolStripMenuItem.Text = "Pregledaj pisce";
+            this.pregledajPisceToolStripMenuItem.Click += new System.EventHandler(this.pregledajPisceToolStripMenuItem_Click);
+            // 
+            // dodajPiscaToolStripMenuItem
+            // 
+            this.dodajPiscaToolStripMenuItem.Name = "dodajPiscaToolStripMenuItem";
+            this.dodajPiscaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajPiscaToolStripMenuItem.Text = "Dodaj pisca";
+            this.dodajPiscaToolStripMenuItem.Click += new System.EventHandler(this.dodajPiscaToolStripMenuItem_Click);
             // 
             // odjaviSeToolStripMenuItem
             // 
@@ -174,13 +208,6 @@ namespace eLibrary.WinUI
             this.odjaviSeToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.odjaviSeToolStripMenuItem.Text = "Odjavi se";
             this.odjaviSeToolStripMenuItem.Click += new System.EventHandler(this.odjaviSeToolStripMenuItem_Click);
-            // 
-            // dodajŽanrToolStripMenuItem
-            // 
-            this.dodajŽanrToolStripMenuItem.Name = "dodajŽanrToolStripMenuItem";
-            this.dodajŽanrToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dodajŽanrToolStripMenuItem.Text = "Dodaj žanr";
-            this.dodajŽanrToolStripMenuItem.Click += new System.EventHandler(this.dodajŽanrToolStripMenuItem_Click);
             // 
             // frmIndex
             // 
@@ -225,6 +252,9 @@ namespace eLibrary.WinUI
         private System.Windows.Forms.ToolStripMenuItem žanroviToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pregledŽanrovaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajŽanrToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pisciToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pregledajPisceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajPiscaToolStripMenuItem;
     }
 }
 
