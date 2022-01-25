@@ -35,6 +35,7 @@ namespace eLibrary.WinUI.Forms.Pisci
                 txtIme.Text = pisci.Ime;
                 txtPrezime.Text = pisci.Prezime;
                 dateTimePicker1.Value = pisci.DatumRodjenja;
+                
 
                 foreach(Model.Grad item in cmbGrad.Items)
                 {
@@ -64,6 +65,8 @@ namespace eLibrary.WinUI.Forms.Pisci
                     DatumRodjenja = DateTime.Parse(dateTimePicker1.Value.ToShortDateString()),
 
                     Grad_ID = (cmbGrad.SelectedItem as Model.Grad).Grad_ID,
+                    
+                  
 
                 };
                 var pisci = await _pisci.Get<List<Model.Pisac>>(null);

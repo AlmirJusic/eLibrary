@@ -23,8 +23,6 @@ namespace eLibrary.Database
         public DbSet<Korisnik> Korisnik { get; set; }
         public DbSet<Spol> Spol { get; set; }
         public DbSet<Uloga> Uloga { get; set; }
-        public DbSet<KnjigaPisac> KnjigaPisac { get; set; }
-        public DbSet<KnjigaZanr> KnjigaZanr { get; set; }
         public DbSet<KorisnikKnjigaKomentar> KorisnikKnjigaKomentar { get; set; }
         public DbSet<KorisnikKnjigaOcjena> KorisnikKnjigaOcjena { get; set; }
         public DbSet<KupovinaKnjige> KupovinaKnjige { get; set; }
@@ -65,8 +63,6 @@ namespace eLibrary.Database
             SeedZanrove(modelBuilder);
             SeedKorisnike(modelBuilder);
             SeedKnjige(modelBuilder);
-            SeedKnjigaPisac(modelBuilder);
-            SeedKnjigaZanr(modelBuilder);
             SeedPrijedlogKnjige(modelBuilder);
             SeedKorisnikKnjigaKomentar(modelBuilder);
             SeedKorisnikKnjigaOcjena(modelBuilder);
@@ -231,24 +227,7 @@ namespace eLibrary.Database
                 );
         }
 
-        private void SeedKnjigaZanr(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<KnjigaZanr>().HasData(
-                new KnjigaZanr { KnjigaZanr_ID = 1, Knjiga_ID = 1, Zanr_ID = 1 },
-                new KnjigaZanr { KnjigaZanr_ID = 2, Knjiga_ID = 2, Zanr_ID = 3 },
-                new KnjigaZanr { KnjigaZanr_ID = 3, Knjiga_ID = 3, Zanr_ID = 2 }
-                );
-                
-        }
-
-        private void SeedKnjigaPisac(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<KnjigaPisac>().HasData(
-                 new KnjigaPisac { KnjigaPisac_ID = 1, Knjiga_ID = 1, Pisac_ID = 2 },
-                 new KnjigaPisac { KnjigaPisac_ID = 2, Knjiga_ID = 2, Pisac_ID = 4 },
-                 new KnjigaPisac { KnjigaPisac_ID = 3, Knjiga_ID = 3, Pisac_ID = 1 }
-                 );
-        }
+        
 
         private void SeedKnjige(ModelBuilder modelBuilder)
         {
@@ -263,7 +242,10 @@ namespace eLibrary.Database
                      Opis = "Priča počinje s uvjetima života u Višegradu prije nego što je most sagrađen, a onda se nastavlja na njegovu izgradnju u 16. stoljeću. Nakon toga govori o životu u kasabi koji je usko vezan uz most. Preko njega prolaze putnici, trgovci i mještani. Svaki veliki događaj, bio sretan ili ne, obilježava se prelaskom preko mosta. ",
                      PDF = "NaDrinicuprija.pdf",
                      PDFDodan = true,
-                     DatumIzdavanja = DateTime.Now
+                     DatumIzdavanja = DateTime.Now,
+                     Pisac_ID=1,
+                     Zanr_ID=1
+                     
 
 
                  },
@@ -277,7 +259,9 @@ namespace eLibrary.Database
                      Opis = "Annin dnevnik pisan je u vremenskom razdoblju od 1942 do 1944. godine, najteža vremena Drugog svjetskog rata u Europi. Kamo god krenuli, Hitlerova je vojska širila otrov antisemitizma i rasne mržnje. ",
                      PDF = "DnevnikAneFrank.pdf",
                      PDFDodan = true,
-                     DatumIzdavanja = DateTime.Now
+                     DatumIzdavanja = DateTime.Now,
+                     Pisac_ID=2,
+                     Zanr_ID=2
                  },
                  new Knjiga
                  {
@@ -289,7 +273,9 @@ namespace eLibrary.Database
                      Opis = "Ovo su pjesme Sidran Abdulaha ",
                      PDF = "PJesme-Abdulah-Sidran.pdf",
                      PDFDodan = true,
-                     DatumIzdavanja = DateTime.Now
+                     DatumIzdavanja = DateTime.Now,
+                     Pisac_ID=3,
+                     Zanr_ID=3
                  }
                  );
         }

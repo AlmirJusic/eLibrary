@@ -18,6 +18,7 @@ namespace eLibrary.Model.Requests.Pisac
         [Required(ErrorMessage = "Potrebno je unijeti datum rodjenja pisca!")]
         public DateTime DatumRodjenja { get; set; }
         public int Grad_ID { get; set; }
+        
 
     }
 }

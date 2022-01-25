@@ -10,5 +10,9 @@ namespace eLibrary.Model
     {
         public int Zanr_ID { get; set; }
         public string NazivZanra { get; set; }
+        public override string ToString()
+        {
+            return NazivZanra;
+        }
     }
 }

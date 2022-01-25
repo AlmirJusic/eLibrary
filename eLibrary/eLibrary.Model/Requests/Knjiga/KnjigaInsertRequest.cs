@@ -26,5 +26,9 @@ namespace eLibrary.Model.Requests.Knjiga
         public string Opis { get; set; }
         public bool PDFDodan { get; set; }
 
+        
+        public int Pisac_ID { get; set; }
+        public int Zanr_ID { get; set; }
+
     }
 }

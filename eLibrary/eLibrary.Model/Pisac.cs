@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,5 +15,13 @@ namespace eLibrary.Model
         public DateTime DatumRodjenja { get; set; }
         public int Grad_ID { get; set; }
         public virtual Grad Grad { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Ime} {Prezime}";
+        }
+        
+        public string ImePrezime => $"{Ime} {Prezime}";
+
     }
 }

@@ -21,7 +21,15 @@ namespace eLibrary.Database.Models
         public string Opis { get; set; }
         public bool PDFDodan { get; set; }
 
+        [ForeignKey(nameof(Pisac))]
+        public int Pisac_ID { get; set; }
+        public virtual Pisac Pisac { get; set; }
 
-        
+        [ForeignKey(nameof(Zanr))]
+        public int Zanr_ID { get; set; }
+        public virtual Zanr Zanr { get; set; }
+
+
+
     }
 }

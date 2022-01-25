@@ -9,6 +9,8 @@ namespace eLibrary.Model.Requests.Knjiga
     public class KnjigaSearchRequest
     {
         public string? NazivKnjige { get; set; }
+        public string? Pisac { get; set; }
+        public int? Zanr_ID { get; set; }
 
     }
 }

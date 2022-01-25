@@ -10,8 +10,8 @@ using eLibrary.Database;
 namespace eLibrary.Migrations
 {
     [DbContext(typeof(eLibraryContext))]
-    [Migration("20220123220155_UpdateKorisniciv2")]
-    partial class UpdateKorisniciv2
+    [Migration("20220125111743_AddPisacZanrToKnjiga")]
+    partial class AddPisacZanrToKnjiga
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -132,10 +132,20 @@ namespace eLibrary.Migrations
                     b.Property<bool>("PDFDodan")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Pisac_ID")
+                        .HasColumnType("int");
+
                     b.Property<byte[]>("Slika")
                         .HasColumnType("varbinary(max)");
 
+                    b.Property<int>("Zanr_ID")
+                        .HasColumnType("int");
+
                     b.HasKey("Knjiga_ID");
+
+                    b.HasIndex("Pisac_ID");
+
+                    b.HasIndex("Zanr_ID");
 
                     b.ToTable("Knjiga");
 
@@ -144,118 +154,40 @@ namespace eLibrary.Migrations
                         {
                             Knjiga_ID = 1,
                             Cijena = 49.990000000000002,
-                            DatumIzdavanja = new DateTime(2022, 1, 23, 23, 1, 54, 839, DateTimeKind.Local).AddTicks(4558),
+                            DatumIzdavanja = new DateTime(2022, 1, 25, 12, 17, 43, 324, DateTimeKind.Local).AddTicks(4318),
                             NazivKnjige = "Na Drini cuprija",
                             Ocjena = 5.0,
                             Opis = "Priča počinje s uvjetima života u Višegradu prije nego što je most sagrađen, a onda se nastavlja na njegovu izgradnju u 16. stoljeću. Nakon toga govori o životu u kasabi koji je usko vezan uz most. Preko njega prolaze putnici, trgovci i mještani. Svaki veliki događaj, bio sretan ili ne, obilježava se prelaskom preko mosta. ",
                             PDF = "NaDrinicuprija.pdf",
-                            PDFDodan = true
+                            PDFDodan = true,
+                            Pisac_ID = 1,
+                            Zanr_ID = 1
                         },
                         new
                         {
                             Knjiga_ID = 2,
                             Cijena = 39.990000000000002,
-                            DatumIzdavanja = new DateTime(2022, 1, 23, 23, 1, 54, 839, DateTimeKind.Local).AddTicks(4801),
+                            DatumIzdavanja = new DateTime(2022, 1, 25, 12, 17, 43, 324, DateTimeKind.Local).AddTicks(4920),
                             NazivKnjige = "Dnevnik Ane Frank",
                             Ocjena = 4.7000000000000002,
                             Opis = "Annin dnevnik pisan je u vremenskom razdoblju od 1942 do 1944. godine, najteža vremena Drugog svjetskog rata u Europi. Kamo god krenuli, Hitlerova je vojska širila otrov antisemitizma i rasne mržnje. ",
                             PDF = "DnevnikAneFrank.pdf",
-                            PDFDodan = true
+                            PDFDodan = true,
+                            Pisac_ID = 2,
+                            Zanr_ID = 2
                         },
                         new
                         {
                             Knjiga_ID = 3,
                             Cijena = 10.0,
-                            DatumIzdavanja = new DateTime(2022, 1, 23, 23, 1, 54, 839, DateTimeKind.Local).AddTicks(4809),
+                            DatumIzdavanja = new DateTime(2022, 1, 25, 12, 17, 43, 324, DateTimeKind.Local).AddTicks(4929),
                             NazivKnjige = "Pjesme",
                             Ocjena = 4.4000000000000004,
                             Opis = "Ovo su pjesme Sidran Abdulaha ",
                             PDF = "PJesme-Abdulah-Sidran.pdf",
-                            PDFDodan = true
-                        });
-                });
-
-            modelBuilder.Entity("eLibrary.Database.Models.KnjigaPisac", b =>
-                {
-                    b.Property<int>("KnjigaPisac_ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Knjiga_ID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Pisac_ID")
-                        .HasColumnType("int");
-
-                    b.HasKey("KnjigaPisac_ID");
-
-                    b.HasIndex("Knjiga_ID");
-
-                    b.HasIndex("Pisac_ID");
-
-                    b.ToTable("KnjigaPisac");
-
-                    b.HasData(
-                        new
-                        {
-                            KnjigaPisac_ID = 1,
-                            Knjiga_ID = 1,
-                            Pisac_ID = 2
-                        },
-                        new
-                        {
-                            KnjigaPisac_ID = 2,
-                            Knjiga_ID = 2,
-                            Pisac_ID = 4
-                        },
-                        new
-                        {
-                            KnjigaPisac_ID = 3,
-                            Knjiga_ID = 3,
-                            Pisac_ID = 1
-                        });
-                });
-
-            modelBuilder.Entity("eLibrary.Database.Models.KnjigaZanr", b =>
-                {
-                    b.Property<int>("KnjigaZanr_ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Knjiga_ID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Zanr_ID")
-                        .HasColumnType("int");
-
-                    b.HasKey("KnjigaZanr_ID");
-
-                    b.HasIndex("Knjiga_ID");
-
-                    b.HasIndex("Zanr_ID");
-
-                    b.ToTable("KnjigaZanr");
-
-                    b.HasData(
-                        new
-                        {
-                            KnjigaZanr_ID = 1,
-                            Knjiga_ID = 1,
-                            Zanr_ID = 1
-                        },
-                        new
-                        {
-                            KnjigaZanr_ID = 2,
-                            Knjiga_ID = 2,
+                            PDFDodan = true,
+                            Pisac_ID = 3,
                             Zanr_ID = 3
-                        },
-                        new
-                        {
-                            KnjigaZanr_ID = 3,
-                            Knjiga_ID = 3,
-                            Zanr_ID = 2
                         });
                 });
 
@@ -313,7 +245,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             Korisnik_ID = 1,
-                            DatumRodjenja = new DateTime(2022, 1, 23, 23, 1, 54, 838, DateTimeKind.Local).AddTicks(5468),
+                            DatumRodjenja = new DateTime(2022, 1, 25, 12, 17, 43, 322, DateTimeKind.Local).AddTicks(8342),
                             Email = "admin@gmail.com",
                             Grad_ID = 1,
                             Ime = "Admin",
@@ -328,7 +260,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             Korisnik_ID = 2,
-                            DatumRodjenja = new DateTime(2022, 1, 23, 23, 1, 54, 838, DateTimeKind.Local).AddTicks(9041),
+                            DatumRodjenja = new DateTime(2022, 1, 25, 12, 17, 43, 323, DateTimeKind.Local).AddTicks(7080),
                             Email = "korisnik@gmail.com",
                             Grad_ID = 3,
                             Ime = "Korisnik",
@@ -343,7 +275,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             Korisnik_ID = 3,
-                            DatumRodjenja = new DateTime(2022, 1, 23, 23, 1, 54, 838, DateTimeKind.Local).AddTicks(9552),
+                            DatumRodjenja = new DateTime(2022, 1, 25, 12, 17, 43, 323, DateTimeKind.Local).AddTicks(9014),
                             Email = "almir.jusic@edu.fit.ba",
                             Grad_ID = 3,
                             Ime = "Almir",
@@ -388,7 +320,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             KorisnikKnjigaKomentar_ID = 1,
-                            DatumKomentara = new DateTime(2022, 1, 23, 23, 1, 54, 840, DateTimeKind.Local).AddTicks(5749),
+                            DatumKomentara = new DateTime(2022, 1, 25, 12, 17, 43, 325, DateTimeKind.Local).AddTicks(363),
                             Knjiga_ID = 3,
                             Korisnik_ID = 2,
                             SadrzajKomentara = "Knjiga je okeej!"
@@ -396,7 +328,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             KorisnikKnjigaKomentar_ID = 2,
-                            DatumKomentara = new DateTime(2022, 1, 23, 23, 1, 54, 840, DateTimeKind.Local).AddTicks(6205),
+                            DatumKomentara = new DateTime(2022, 1, 25, 12, 17, 43, 325, DateTimeKind.Local).AddTicks(740),
                             Knjiga_ID = 2,
                             Korisnik_ID = 2,
                             SadrzajKomentara = "Knjiga je dosadna!"
@@ -404,7 +336,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             KorisnikKnjigaKomentar_ID = 3,
-                            DatumKomentara = new DateTime(2022, 1, 23, 23, 1, 54, 840, DateTimeKind.Local).AddTicks(6213),
+                            DatumKomentara = new DateTime(2022, 1, 25, 12, 17, 43, 325, DateTimeKind.Local).AddTicks(747),
                             Knjiga_ID = 1,
                             Korisnik_ID = 2,
                             SadrzajKomentara = "Preporucujem knjiguu!"
@@ -442,7 +374,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             KorisnikKnjigaOcjena_ID = 1,
-                            DatumOcjene = new DateTime(2022, 1, 23, 23, 1, 54, 840, DateTimeKind.Local).AddTicks(9087),
+                            DatumOcjene = new DateTime(2022, 1, 25, 12, 17, 43, 325, DateTimeKind.Local).AddTicks(3088),
                             Knjiga_ID = 3,
                             Korisnik_ID = 2,
                             Ocjena = 4.5
@@ -450,7 +382,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             KorisnikKnjigaOcjena_ID = 2,
-                            DatumOcjene = new DateTime(2022, 1, 23, 23, 1, 54, 840, DateTimeKind.Local).AddTicks(9328),
+                            DatumOcjene = new DateTime(2022, 1, 25, 12, 17, 43, 325, DateTimeKind.Local).AddTicks(3294),
                             Knjiga_ID = 2,
                             Korisnik_ID = 2,
                             Ocjena = 4.9000000000000004
@@ -458,7 +390,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             KorisnikKnjigaOcjena_ID = 3,
-                            DatumOcjene = new DateTime(2022, 1, 23, 23, 1, 54, 840, DateTimeKind.Local).AddTicks(9335),
+                            DatumOcjene = new DateTime(2022, 1, 25, 12, 17, 43, 325, DateTimeKind.Local).AddTicks(3300),
                             Knjiga_ID = 1,
                             Korisnik_ID = 2,
                             Ocjena = 4.0999999999999996
@@ -501,7 +433,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             KupovinaKnjige_ID = 1,
-                            DatumKupovine = new DateTime(2022, 1, 23, 23, 1, 54, 841, DateTimeKind.Local).AddTicks(2434),
+                            DatumKupovine = new DateTime(2022, 1, 25, 12, 17, 43, 325, DateTimeKind.Local).AddTicks(5661),
                             Knjiga_ID = 1,
                             Korisnik_ID = 2,
                             Odobreno = true,
@@ -510,7 +442,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             KupovinaKnjige_ID = 2,
-                            DatumKupovine = new DateTime(2022, 1, 23, 23, 1, 54, 841, DateTimeKind.Local).AddTicks(3077),
+                            DatumKupovine = new DateTime(2022, 1, 25, 12, 17, 43, 325, DateTimeKind.Local).AddTicks(6175),
                             Knjiga_ID = 3,
                             Korisnik_ID = 2,
                             Odobreno = false,
@@ -519,7 +451,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             KupovinaKnjige_ID = 3,
-                            DatumKupovine = new DateTime(2022, 1, 23, 23, 1, 54, 841, DateTimeKind.Local).AddTicks(3088),
+                            DatumKupovine = new DateTime(2022, 1, 25, 12, 17, 43, 325, DateTimeKind.Local).AddTicks(6184),
                             Knjiga_ID = 2,
                             Korisnik_ID = 2,
                             Odobreno = true,
@@ -583,7 +515,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             Pisac_ID = 1,
-                            DatumRodjenja = new DateTime(2022, 1, 23, 23, 1, 54, 835, DateTimeKind.Local).AddTicks(7219),
+                            DatumRodjenja = new DateTime(2022, 1, 25, 12, 17, 43, 320, DateTimeKind.Local).AddTicks(4515),
                             Grad_ID = 1,
                             Ime = "Abdulah",
                             Prezime = "Sidran"
@@ -591,7 +523,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             Pisac_ID = 2,
-                            DatumRodjenja = new DateTime(2022, 1, 23, 23, 1, 54, 837, DateTimeKind.Local).AddTicks(7000),
+                            DatumRodjenja = new DateTime(2022, 1, 25, 12, 17, 43, 322, DateTimeKind.Local).AddTicks(1174),
                             Grad_ID = 4,
                             Ime = "Ivo",
                             Prezime = "Andric"
@@ -599,7 +531,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             Pisac_ID = 3,
-                            DatumRodjenja = new DateTime(2022, 1, 23, 23, 1, 54, 837, DateTimeKind.Local).AddTicks(7022),
+                            DatumRodjenja = new DateTime(2022, 1, 25, 12, 17, 43, 322, DateTimeKind.Local).AddTicks(1199),
                             Grad_ID = 3,
                             Ime = "Mak",
                             Prezime = "Dizdar"
@@ -607,7 +539,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             Pisac_ID = 4,
-                            DatumRodjenja = new DateTime(2022, 1, 23, 23, 1, 54, 837, DateTimeKind.Local).AddTicks(7025),
+                            DatumRodjenja = new DateTime(2022, 1, 25, 12, 17, 43, 322, DateTimeKind.Local).AddTicks(1202),
                             Grad_ID = 2,
                             Ime = "Ana",
                             Prezime = "Frank"
@@ -658,7 +590,7 @@ namespace eLibrary.Migrations
                             Placanje_ID = 2,
                             BrojKreditneKartice = "1234555522223333",
                             CVV = "123",
-                            DatumPlacanja = new DateTime(2022, 1, 23, 23, 1, 54, 841, DateTimeKind.Local).AddTicks(8908),
+                            DatumPlacanja = new DateTime(2022, 1, 25, 12, 17, 43, 326, DateTimeKind.Local).AddTicks(860),
                             ImePrezime = "Almir Jusic",
                             NacinPlacanja_ID = 1,
                             UkupnaCijena = 25.0
@@ -675,7 +607,7 @@ namespace eLibrary.Migrations
                             Placanje_ID = 4,
                             BrojKreditneKartice = "1111222233334444",
                             CVV = "999",
-                            DatumPlacanja = new DateTime(2022, 1, 23, 23, 1, 54, 841, DateTimeKind.Local).AddTicks(9343),
+                            DatumPlacanja = new DateTime(2022, 1, 25, 12, 17, 43, 326, DateTimeKind.Local).AddTicks(1243),
                             ImePrezime = "Meho Mehic",
                             NacinPlacanja_ID = 1,
                             UkupnaCijena = 25.0
@@ -717,7 +649,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             PrijedlogKnjige_ID = 1,
-                            DatumPrijedloga = new DateTime(2022, 1, 23, 23, 1, 54, 840, DateTimeKind.Local).AddTicks(2050),
+                            DatumPrijedloga = new DateTime(2022, 1, 25, 12, 17, 43, 324, DateTimeKind.Local).AddTicks(7098),
                             Korisnik_ID = 2,
                             NazivPrijedlogaKnjige = "Zeleno busenje",
                             Odgovoren = true,
@@ -727,7 +659,7 @@ namespace eLibrary.Migrations
                         new
                         {
                             PrijedlogKnjige_ID = 2,
-                            DatumPrijedloga = new DateTime(2022, 1, 23, 23, 1, 54, 840, DateTimeKind.Local).AddTicks(2936),
+                            DatumPrijedloga = new DateTime(2022, 1, 25, 12, 17, 43, 324, DateTimeKind.Local).AddTicks(7732),
                             Korisnik_ID = 2,
                             NazivPrijedlogaKnjige = "Orlovi rano lete",
                             Odgovoren = false,
@@ -843,30 +775,11 @@ namespace eLibrary.Migrations
                     b.Navigation("Drzava");
                 });
 
-            modelBuilder.Entity("eLibrary.Database.Models.KnjigaPisac", b =>
+            modelBuilder.Entity("eLibrary.Database.Models.Knjiga", b =>
                 {
-                    b.HasOne("eLibrary.Database.Models.Knjiga", "Knjiga")
-                        .WithMany()
-                        .HasForeignKey("Knjiga_ID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("eLibrary.Database.Models.Pisac", "Pisac")
                         .WithMany()
                         .HasForeignKey("Pisac_ID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Knjiga");
-
-                    b.Navigation("Pisac");
-                });
-
-            modelBuilder.Entity("eLibrary.Database.Models.KnjigaZanr", b =>
-                {
-                    b.HasOne("eLibrary.Database.Models.Knjiga", "Knjiga")
-                        .WithMany()
-                        .HasForeignKey("Knjiga_ID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -876,7 +789,7 @@ namespace eLibrary.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Knjiga");
+                    b.Navigation("Pisac");
 
                     b.Navigation("Zanr");
                 });

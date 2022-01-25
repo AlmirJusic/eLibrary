@@ -17,6 +17,13 @@ namespace eLibrary.Model
         public string PDF { get; set; }
         public string Opis { get; set; }
         public bool PDFDodan { get; set; }
+
+        public int Pisac_ID { get; set; }
+        public virtual Pisac Pisac { get; set; }
+        public int Zanr_ID { get; set; }
+        public virtual Zanr Zanr { get; set; }
+
+
     }
 }
 

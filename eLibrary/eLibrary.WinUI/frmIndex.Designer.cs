@@ -50,6 +50,9 @@ namespace eLibrary.WinUI
             this.pregledajPisceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajPiscaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odjaviSeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.knjigeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledKnjigaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajKnjiguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +82,8 @@ namespace eLibrary.WinUI
             this.gradoviToolStripMenuItem,
             this.žanroviToolStripMenuItem,
             this.pisciToolStripMenuItem,
-            this.odjaviSeToolStripMenuItem});
+            this.odjaviSeToolStripMenuItem,
+            this.knjigeToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -191,14 +195,14 @@ namespace eLibrary.WinUI
             // pregledajPisceToolStripMenuItem
             // 
             this.pregledajPisceToolStripMenuItem.Name = "pregledajPisceToolStripMenuItem";
-            this.pregledajPisceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pregledajPisceToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.pregledajPisceToolStripMenuItem.Text = "Pregledaj pisce";
             this.pregledajPisceToolStripMenuItem.Click += new System.EventHandler(this.pregledajPisceToolStripMenuItem_Click);
             // 
             // dodajPiscaToolStripMenuItem
             // 
             this.dodajPiscaToolStripMenuItem.Name = "dodajPiscaToolStripMenuItem";
-            this.dodajPiscaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajPiscaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.dodajPiscaToolStripMenuItem.Text = "Dodaj pisca";
             this.dodajPiscaToolStripMenuItem.Click += new System.EventHandler(this.dodajPiscaToolStripMenuItem_Click);
             // 
@@ -208,6 +212,29 @@ namespace eLibrary.WinUI
             this.odjaviSeToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.odjaviSeToolStripMenuItem.Text = "Odjavi se";
             this.odjaviSeToolStripMenuItem.Click += new System.EventHandler(this.odjaviSeToolStripMenuItem_Click);
+            // 
+            // knjigeToolStripMenuItem
+            // 
+            this.knjigeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pregledKnjigaToolStripMenuItem,
+            this.dodajKnjiguToolStripMenuItem});
+            this.knjigeToolStripMenuItem.Name = "knjigeToolStripMenuItem";
+            this.knjigeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.knjigeToolStripMenuItem.Text = "Knjige";
+            // 
+            // pregledKnjigaToolStripMenuItem
+            // 
+            this.pregledKnjigaToolStripMenuItem.Name = "pregledKnjigaToolStripMenuItem";
+            this.pregledKnjigaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pregledKnjigaToolStripMenuItem.Text = "Pregled knjiga";
+            this.pregledKnjigaToolStripMenuItem.Click += new System.EventHandler(this.pregledKnjigaToolStripMenuItem_Click);
+            // 
+            // dodajKnjiguToolStripMenuItem
+            // 
+            this.dodajKnjiguToolStripMenuItem.Name = "dodajKnjiguToolStripMenuItem";
+            this.dodajKnjiguToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajKnjiguToolStripMenuItem.Text = "Dodaj knjigu";
+            this.dodajKnjiguToolStripMenuItem.Click += new System.EventHandler(this.dodajKnjiguToolStripMenuItem_Click);
             // 
             // frmIndex
             // 
@@ -255,6 +282,9 @@ namespace eLibrary.WinUI
         private System.Windows.Forms.ToolStripMenuItem pisciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pregledajPisceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajPiscaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem knjigeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pregledKnjigaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajKnjiguToolStripMenuItem;
     }
 }
 

@@ -28,8 +28,6 @@ using eLibrary.Model.Requests.Pisac;
 using eLibrary.Model.Requests.Knjiga;
 using Microsoft.AspNetCore.Authentication;
 using eLibrary.Security;
-using eLibrary.Model.Requests.KnjigaPisac;
-using eLibrary.Model.Requests.KnjigaZanr;
 using eLibrary.Model.Requests.KorisnikKnjigaKomentar;
 using eLibrary.Model.Requests.KorisnikKnjigaOcjena;
 using eLibrary.Model.Requests.NacinPlacanja;
@@ -99,8 +97,6 @@ namespace eLibrary
             services.AddScoped<ICRUDService<eLibrary.Model.Pisac, PisacSearchRequest, PisacInsertRequest, PisacInsertRequest>, PisacService>();
             services.AddScoped<ICRUDService<eLibrary.Model.Knjiga, KnjigaSearchRequest, KnjigaInsertRequest, KnjigaInsertRequest>, KnjigaService>();
             services.AddScoped<IKorisnikService, KorisnikService>();
-            services.AddScoped<ICRUDService<eLibrary.Model.KnjigaPisac, eLibrary.Model.KnjigaPisac, KnjigaPisacRequest, KnjigaPisacRequest>, BaseCRUDService<eLibrary.Model.KnjigaPisac, eLibrary.Model.KnjigaPisac, eLibrary.Database.Models.KnjigaPisac,KnjigaPisacRequest,KnjigaPisacRequest>>();
-            services.AddScoped<ICRUDService<eLibrary.Model.KnjigaZanr, eLibrary.Model.KnjigaZanr, KnjigaZanrRequest, KnjigaZanrRequest>, BaseCRUDService<eLibrary.Model.KnjigaZanr, eLibrary.Model.KnjigaZanr, eLibrary.Database.Models.KnjigaZanr, KnjigaZanrRequest, KnjigaZanrRequest>>();
             services.AddScoped<ICRUDService<eLibrary.Model.KorisnikKnjigaKomentar, KorisnikKnjigaKomentarRequest, KorisnikKnjigaKomentarRequest, KorisnikKnjigaKomentarRequest>, BaseCRUDService<eLibrary.Model.KorisnikKnjigaKomentar, KorisnikKnjigaKomentarRequest, eLibrary.Database.Models.KorisnikKnjigaKomentar, KorisnikKnjigaKomentarRequest, KorisnikKnjigaKomentarRequest>>();
             services.AddScoped<ICRUDService<eLibrary.Model.KorisnikKnjigaOcjena, eLibrary.Model.KorisnikKnjigaOcjena, KorisnikKnjigaOcjenaRequest, KorisnikKnjigaOcjenaRequest>, BaseCRUDService<eLibrary.Model.KorisnikKnjigaOcjena, eLibrary.Model.KorisnikKnjigaOcjena, eLibrary.Database.Models.KorisnikKnjigaOcjena, KorisnikKnjigaOcjenaRequest, KorisnikKnjigaOcjenaRequest>>();
             services.AddScoped<ICRUDService<eLibrary.Model.NacinPlacanja, NacinPlacanjaSearchRequest, NacinPlacanjaInsertRequest, NacinPlacanjaInsertRequest>, NacinPlacanjaService>();

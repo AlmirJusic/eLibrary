@@ -2,6 +2,7 @@
 using eLibrary.WinUI.Forms.Drzava;
 using eLibrary.WinUI.Forms.Drzave;
 using eLibrary.WinUI.Forms.Gradovi;
+using eLibrary.WinUI.Forms.Knjige;
 using eLibrary.WinUI.Forms.Korisnici;
 using eLibrary.WinUI.Forms.Pisci;
 using eLibrary.WinUI.Forms.Zanrovi;
@@ -182,6 +183,20 @@ namespace eLibrary.WinUI
         private void dodajPiscaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPisciAdd frm = new frmPisciAdd();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void pregledKnjigaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKnjige frm = new frmKnjige();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void dodajKnjiguToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKnjigeAdd frm = new frmKnjigeAdd();
             frm.MdiParent = this;
             frm.Show();
         }

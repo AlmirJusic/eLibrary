@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using eLibrary.Database;
 using eLibrary.Model.Requests.Knjiga;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +16,19 @@ namespace eLibrary.Services.Services
         }
         public override List<eLibrary.Model.Knjiga> Get(KnjigaSearchRequest search)
         {
-            var query = _db.Knjiga.AsQueryable();
+            var query = _db.Knjiga.Include(x=>x.Pisac).Include(x=>x.Zanr).AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(search?.NazivKnjige))
             {
                 query = query.Where(x => x.NazivKnjige.ToLower().Contains(search.NazivKnjige.ToLower()));
+            }
+            if (!string.IsNullOrWhiteSpace(search?.Pisac))
+            {
+                query = query.Where(x => x.Pisac.Ime.ToLower().Contains(search.Pisac.ToLower())|| x.Pisac.Prezime.ToLower().Contains(search.Pisac.ToLower()));
+            }
+            if (!string.IsNullOrWhiteSpace(search?.Zanr_ID.ToString()))
+            {
+                query = query.Where(x => x.Zanr_ID == search.Zanr_ID);
             }
 
 
