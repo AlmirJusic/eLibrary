@@ -1,5 +1,6 @@
 ﻿using eLibrary.Model.Requests.Knjiga;
 using eLibrary.WinUI.API;
+using eLibrary.WinUI.Forms.KorisnikKnjigaKomentar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,6 +89,11 @@ namespace eLibrary.WinUI.Forms.Knjige
                     frmKnjigeAdd frm = new frmKnjigeAdd(dgvKnjige, item.Knjiga_ID);
                     frm.ShowDialog();
                 }
+            }
+            if(e.ColumnIndex==8)
+            {
+                frmKorisnikKnjigaKomentar frm = new frmKorisnikKnjigaKomentar(item.Knjiga_ID);
+                frm.Show();
             }
         }
 

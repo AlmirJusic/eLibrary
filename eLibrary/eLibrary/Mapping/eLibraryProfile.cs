@@ -37,7 +37,7 @@ namespace eLibrary.Mapping
             CreateMap<Korisnik, Model.Requests.Korisnik.KorisnikInsertRequest>().ReverseMap();
             CreateMap<Korisnik, Model.Korisnik>().ReverseMap();
             //KorisnikKnjigaKomentar
-            CreateMap<KorisnikKnjigaKomentar, Model.Requests.KorisnikKnjigaKomentar.KorisnikKnjigaKomentarRequest>().ReverseMap();
+            CreateMap<KorisnikKnjigaKomentar, Model.Requests.KorisnikKnjigaKomentar.KorisnikKnjigaKomentarInsertRequest>().ReverseMap();
             CreateMap<KorisnikKnjigaKomentar, Model.KorisnikKnjigaKomentar>().ReverseMap();
             //KorisnikKnjigaOcjena
             CreateMap<KorisnikKnjigaOcjena, Model.Requests.KorisnikKnjigaOcjena.KorisnikKnjigaOcjenaRequest>().ReverseMap();

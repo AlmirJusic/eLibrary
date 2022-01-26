@@ -30,6 +30,7 @@ namespace eLibrary.WinUI.Forms.Knjige
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cmbZanr = new System.Windows.Forms.ComboBox();
             this.txtPisacPretraga = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +47,7 @@ namespace eLibrary.WinUI.Forms.Knjige
             this.Cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Izbrisi = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Uredi = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Komentari = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjige)).BeginInit();
@@ -67,6 +68,15 @@ namespace eLibrary.WinUI.Forms.Knjige
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pretraga";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(616, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 15);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Žanr:";
             // 
             // cmbZanr
             // 
@@ -146,7 +156,8 @@ namespace eLibrary.WinUI.Forms.Knjige
             this.Ocjena,
             this.Cijena,
             this.Izbrisi,
-            this.Uredi});
+            this.Uredi,
+            this.Komentari});
             this.dgvKnjige.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKnjige.Location = new System.Drawing.Point(3, 19);
             this.dgvKnjige.Name = "dgvKnjige";
@@ -227,14 +238,13 @@ namespace eLibrary.WinUI.Forms.Knjige
             this.Uredi.Text = "Uredi";
             this.Uredi.UseColumnTextForButtonValue = true;
             // 
-            // label3
+            // Komentari
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(616, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 15);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Žanr:";
+            this.Komentari.HeaderText = "Komentari";
+            this.Komentari.Name = "Komentari";
+            this.Komentari.ReadOnly = true;
+            this.Komentari.Text = "Prikaži";
+            this.Komentari.UseColumnTextForButtonValue = true;
             // 
             // frmKnjige
             // 
@@ -263,6 +273,10 @@ namespace eLibrary.WinUI.Forms.Knjige
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvKnjige;
+        private System.Windows.Forms.TextBox txtPisacPretraga;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbZanr;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn NazivKnjige;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pisac;
         private System.Windows.Forms.DataGridViewTextBoxColumn DatumIzdavanja;
@@ -271,9 +285,6 @@ namespace eLibrary.WinUI.Forms.Knjige
         private System.Windows.Forms.DataGridViewTextBoxColumn Cijena;
         private System.Windows.Forms.DataGridViewButtonColumn Izbrisi;
         private System.Windows.Forms.DataGridViewButtonColumn Uredi;
-        private System.Windows.Forms.TextBox txtPisacPretraga;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbZanr;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewButtonColumn Komentari;
     }
 }

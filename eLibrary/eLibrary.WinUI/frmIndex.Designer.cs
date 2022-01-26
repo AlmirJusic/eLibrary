@@ -53,6 +53,7 @@ namespace eLibrary.WinUI
             this.knjigeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledKnjigaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajKnjiguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.komentariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -82,8 +83,9 @@ namespace eLibrary.WinUI
             this.gradoviToolStripMenuItem,
             this.žanroviToolStripMenuItem,
             this.pisciToolStripMenuItem,
-            this.odjaviSeToolStripMenuItem,
-            this.knjigeToolStripMenuItem});
+            this.knjigeToolStripMenuItem,
+            this.komentariToolStripMenuItem,
+            this.odjaviSeToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -225,16 +227,23 @@ namespace eLibrary.WinUI
             // pregledKnjigaToolStripMenuItem
             // 
             this.pregledKnjigaToolStripMenuItem.Name = "pregledKnjigaToolStripMenuItem";
-            this.pregledKnjigaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pregledKnjigaToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.pregledKnjigaToolStripMenuItem.Text = "Pregled knjiga";
             this.pregledKnjigaToolStripMenuItem.Click += new System.EventHandler(this.pregledKnjigaToolStripMenuItem_Click);
             // 
             // dodajKnjiguToolStripMenuItem
             // 
             this.dodajKnjiguToolStripMenuItem.Name = "dodajKnjiguToolStripMenuItem";
-            this.dodajKnjiguToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajKnjiguToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.dodajKnjiguToolStripMenuItem.Text = "Dodaj knjigu";
             this.dodajKnjiguToolStripMenuItem.Click += new System.EventHandler(this.dodajKnjiguToolStripMenuItem_Click);
+            // 
+            // komentariToolStripMenuItem
+            // 
+            this.komentariToolStripMenuItem.Name = "komentariToolStripMenuItem";
+            this.komentariToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.komentariToolStripMenuItem.Text = "Komentari";
+            this.komentariToolStripMenuItem.Click += new System.EventHandler(this.komentariToolStripMenuItem_Click);
             // 
             // frmIndex
             // 
@@ -285,6 +294,7 @@ namespace eLibrary.WinUI
         private System.Windows.Forms.ToolStripMenuItem knjigeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pregledKnjigaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajKnjiguToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem komentariToolStripMenuItem;
     }
 }
 

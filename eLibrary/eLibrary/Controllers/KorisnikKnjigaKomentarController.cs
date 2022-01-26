@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace eLibrary.Controllers
 {
-    public class KorisnikKnjigaKomentarController : BaseCRUDController<eLibrary.Model.KorisnikKnjigaKomentar, KorisnikKnjigaKomentarRequest, KorisnikKnjigaKomentarRequest, KorisnikKnjigaKomentarRequest>
+    public class KorisnikKnjigaKomentarController : BaseCRUDController<eLibrary.Model.KorisnikKnjigaKomentar, KorisnikKnjigaKomentarSearchRequest, KorisnikKnjigaKomentarInsertRequest, KorisnikKnjigaKomentarInsertRequest>
     {
-        public KorisnikKnjigaKomentarController(ICRUDService<eLibrary.Model.KorisnikKnjigaKomentar, KorisnikKnjigaKomentarRequest, KorisnikKnjigaKomentarRequest, KorisnikKnjigaKomentarRequest> service) : base(service)
+        public KorisnikKnjigaKomentarController(ICRUDService<eLibrary.Model.KorisnikKnjigaKomentar, KorisnikKnjigaKomentarSearchRequest, KorisnikKnjigaKomentarInsertRequest, KorisnikKnjigaKomentarInsertRequest> service) : base(service)
         {
 
         }

@@ -18,8 +18,8 @@ namespace eLibrary.WinUI.Forms
         public frmLogin()
         {
             InitializeComponent();
-            txtPassword.Text = "almir";
-            txtUsername.Text = "almir";
+            txtPassword.Text = "admin";
+            txtUsername.Text = "admin";
         }
 
         private async void btnLogin_Click(object sender, EventArgs e)

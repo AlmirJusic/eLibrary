@@ -23,6 +23,10 @@ namespace eLibrary.Model
         public int Zanr_ID { get; set; }
         public virtual Zanr Zanr { get; set; }
 
+        public override string ToString()
+        {
+            return NazivKnjige;
+        }
 
     }
 }

@@ -259,6 +259,7 @@ namespace eLibrary.WinUI.Forms.Knjige
             this.Controls.Add(this.txtNazivKnjige);
             this.Controls.Add(this.label1);
             this.Name = "frmKnjigeAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmKnjigeAdd";
             this.Load += new System.EventHandler(this.frmKnjigeAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSlika)).EndInit();

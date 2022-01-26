@@ -4,6 +4,7 @@ using eLibrary.WinUI.Forms.Drzave;
 using eLibrary.WinUI.Forms.Gradovi;
 using eLibrary.WinUI.Forms.Knjige;
 using eLibrary.WinUI.Forms.Korisnici;
+using eLibrary.WinUI.Forms.KorisnikKnjigaKomentar;
 using eLibrary.WinUI.Forms.Pisci;
 using eLibrary.WinUI.Forms.Zanrovi;
 using System;
@@ -197,6 +198,13 @@ namespace eLibrary.WinUI
         private void dodajKnjiguToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmKnjigeAdd frm = new frmKnjigeAdd();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void komentariToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKorisnikKnjigaKomentar frm = new frmKorisnikKnjigaKomentar();
             frm.MdiParent = this;
             frm.Show();
         }

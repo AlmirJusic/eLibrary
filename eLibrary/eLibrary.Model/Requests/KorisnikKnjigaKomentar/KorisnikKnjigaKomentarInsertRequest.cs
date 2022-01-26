@@ -7,7 +7,7 @@ using eLibrary.Model;
 
 namespace eLibrary.Model.Requests.KorisnikKnjigaKomentar
 {
-    public class KorisnikKnjigaKomentarRequest
+    public class KorisnikKnjigaKomentarInsertRequest
     {
         public int KorisnikKnjigaKomentar_ID { get; set; }
         public string SadrzajKomentara { get; set; }
@@ -15,8 +15,8 @@ namespace eLibrary.Model.Requests.KorisnikKnjigaKomentar
 
       
         public int Korisnik_ID { get; set; }
-        public eLibrary.Model.Korisnik Korisnik { get; set; }
 
         public int Knjiga_ID { get; set; }
+
     }
 }

@@ -140,6 +140,7 @@ namespace eLibrary.WinUI.Forms.Pisci
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtIme);
             this.Name = "frmPisciAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPisciAdd";
             this.Load += new System.EventHandler(this.frmPisciAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

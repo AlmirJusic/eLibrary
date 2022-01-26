@@ -30,6 +30,8 @@ namespace eLibrary.Services.Services
             {
                 query = query.Where(x => x.Zanr_ID == search.Zanr_ID);
             }
+            
+
 
 
             var list = query.ToList();
