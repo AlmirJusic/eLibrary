@@ -6,6 +6,7 @@ using eLibrary.WinUI.Forms.Knjige;
 using eLibrary.WinUI.Forms.Korisnici;
 using eLibrary.WinUI.Forms.KorisnikKnjigaKomentar;
 using eLibrary.WinUI.Forms.Pisci;
+using eLibrary.WinUI.Forms.PrijedlogKnjige;
 using eLibrary.WinUI.Forms.Zanrovi;
 using System;
 using System.Collections.Generic;
@@ -205,6 +206,13 @@ namespace eLibrary.WinUI
         private void komentariToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmKorisnikKnjigaKomentar frm = new frmKorisnikKnjigaKomentar();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void prijedlogKnjigeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrijedlogKnjige frm = new frmPrijedlogKnjige();
             frm.MdiParent = this;
             frm.Show();
         }

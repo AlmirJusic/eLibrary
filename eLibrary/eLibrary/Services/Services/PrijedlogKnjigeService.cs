@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using eLibrary.Database;
 using eLibrary.Model.Requests.PrijedlogKnjige;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace eLibrary.Services.Services
         }
         public override List<eLibrary.Model.PrijedlogKnjige> Get(PrijedlogKnjigeSearchRequest search)
         {
-            var query = _db.PrijedlogKnjige.AsQueryable();
+            var query = _db.PrijedlogKnjige.Include(x=>x.Korisnik).AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(search?.NazivPrijedlogaKnjige))
             {
