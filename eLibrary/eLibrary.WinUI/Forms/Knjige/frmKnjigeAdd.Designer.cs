@@ -139,9 +139,9 @@ namespace eLibrary.WinUI.Forms.Knjige
             // 
             // btnSpremi
             // 
-            this.btnSpremi.Location = new System.Drawing.Point(360, 438);
+            this.btnSpremi.Location = new System.Drawing.Point(308, 456);
             this.btnSpremi.Name = "btnSpremi";
-            this.btnSpremi.Size = new System.Drawing.Size(140, 40);
+            this.btnSpremi.Size = new System.Drawing.Size(205, 40);
             this.btnSpremi.TabIndex = 12;
             this.btnSpremi.Text = "SPREMI";
             this.btnSpremi.UseVisualStyleBackColor = true;
@@ -149,9 +149,9 @@ namespace eLibrary.WinUI.Forms.Knjige
             // 
             // pbSlika
             // 
-            this.pbSlika.Location = new System.Drawing.Point(360, 65);
+            this.pbSlika.Location = new System.Drawing.Point(308, 65);
             this.pbSlika.Name = "pbSlika";
-            this.pbSlika.Size = new System.Drawing.Size(147, 135);
+            this.pbSlika.Size = new System.Drawing.Size(205, 185);
             this.pbSlika.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSlika.TabIndex = 13;
             this.pbSlika.TabStop = false;
@@ -159,9 +159,9 @@ namespace eLibrary.WinUI.Forms.Knjige
             // 
             // btnSlika
             // 
-            this.btnSlika.Location = new System.Drawing.Point(397, 206);
+            this.btnSlika.Location = new System.Drawing.Point(308, 267);
             this.btnSlika.Name = "btnSlika";
-            this.btnSlika.Size = new System.Drawing.Size(75, 23);
+            this.btnSlika.Size = new System.Drawing.Size(205, 23);
             this.btnSlika.TabIndex = 14;
             this.btnSlika.Text = "Dodaj sliku";
             this.btnSlika.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@ namespace eLibrary.WinUI.Forms.Knjige
             // cbPDF
             // 
             this.cbPDF.AutoSize = true;
-            this.cbPDF.Location = new System.Drawing.Point(377, 312);
+            this.cbPDF.Location = new System.Drawing.Point(308, 349);
             this.cbPDF.Name = "cbPDF";
             this.cbPDF.Size = new System.Drawing.Size(81, 19);
             this.cbPDF.TabIndex = 15;
@@ -183,11 +183,11 @@ namespace eLibrary.WinUI.Forms.Knjige
             // 
             // btnPDF
             // 
-            this.btnPDF.Location = new System.Drawing.Point(360, 338);
+            this.btnPDF.Location = new System.Drawing.Point(308, 395);
             this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(133, 23);
+            this.btnPDF.Size = new System.Drawing.Size(205, 23);
             this.btnPDF.TabIndex = 16;
-            this.btnPDF.Text = "button1";
+            this.btnPDF.Text = "PDF";
             this.btnPDF.UseVisualStyleBackColor = true;
             // 
             // ofdPDF
