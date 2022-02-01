@@ -15,7 +15,7 @@ namespace eLibrary.Mob.Views
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+            
         }
     }
 }
