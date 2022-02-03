@@ -15,6 +15,7 @@ namespace eLibrary.ModelForMobile
         public string? ImePrezime { get; set; }
         public string? BrojKreditneKartice { get; set; }
         public string? CVV { get; set; }
+       
         public DateTime DatumPlacanja { get; set; }
     }
 }

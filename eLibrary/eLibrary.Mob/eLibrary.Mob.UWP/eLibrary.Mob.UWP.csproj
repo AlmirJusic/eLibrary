@@ -106,9 +106,11 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="1001noc.jpg" />
     <Content Include="home.jpg" />
     <Content Include="ocjena_full.png" />
     <Content Include="ocjena_prazna.png" />
+    <Content Include="pay.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
@@ -137,9 +139,6 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="user1.jpg" />
-    <Content Include="user2.jpg" />
-    <Content Include="user3.jpg" />
     <Content Include="xamarin_logo.png" />
     <Content Include="icon_about.png" />
     <Content Include="icon_feed.png" />

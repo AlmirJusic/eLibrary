@@ -34,12 +34,13 @@
                     <Entry Text="{Binding Prezime }"  />
                     <Label Text="Adresa:" FontAttributes="Bold"/>
                     <Entry Text="{Binding Email}"  />
-                   
+
+                    <!--
                     <Label Text="Grad:" FontAttributes="Bold"/>
                     <Picker ItemsSource="{Binding Gradovi}" SelectedItem="{Binding SelectedGrad}" ItemDisplayBinding="{Binding NazivGrada}"></Picker>
                     <Label Text="Spol:" FontAttributes="Bold"/>
                     <Picker ItemsSource="{Binding Spolovi}" SelectedItem="{Binding SelectedSpol}" ItemDisplayBinding="{Binding OznakaSpola}" ></Picker>
-
+-->
                     <Label Text="Username:" FontAttributes="Bold"/>
                     <Entry Text="{Binding Username}"  />
 

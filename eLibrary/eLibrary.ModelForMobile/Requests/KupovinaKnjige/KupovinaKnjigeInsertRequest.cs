@@ -11,7 +11,7 @@ namespace eLibrary.ModelForMobile.Requests.KupovinaKnjige
         public DateTime DatumKupovine { get; set; }
         public int Korisnik_ID { get; set; }
         public int Knjiga_ID { get; set; }
-        public int NacinPlacanja_ID { get; set; }
+        public bool Odobreno { get; set; }
 
     }
 }

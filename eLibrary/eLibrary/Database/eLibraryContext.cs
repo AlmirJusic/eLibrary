@@ -118,7 +118,6 @@ namespace eLibrary.Database
                     Korisnik_ID = 2,
                     Knjiga_ID = 1,
                     DatumKupovine = DateTime.Now,
-                    Placanje_ID=1,
                     Odobreno=true
                 },
                 new KupovinaKnjige
@@ -127,7 +126,6 @@ namespace eLibrary.Database
                     Korisnik_ID = 2,
                     Knjiga_ID = 3,
                     DatumKupovine = DateTime.Now,
-                    Placanje_ID=2,
                     Odobreno=false
                 },
                 new KupovinaKnjige
@@ -136,7 +134,6 @@ namespace eLibrary.Database
                     Korisnik_ID = 2,
                     Knjiga_ID = 2,
                     DatumKupovine = DateTime.Now,
-                    Placanje_ID=2,
                     Odobreno=true
                 }
                 );
@@ -181,7 +178,7 @@ namespace eLibrary.Database
                     Korisnik_ID = 2,
                     Knjiga_ID = 3,
                     DatumKomentara = DateTime.Now,
-                    SadrzajKomentara = "Knjiga je okeej!"
+                    SadrzajKomentara = "Knjiga je sasvim okeej!"
                 },
                 new KorisnikKnjigaKomentar
                 {
@@ -189,7 +186,7 @@ namespace eLibrary.Database
                     Korisnik_ID = 2,
                     Knjiga_ID = 2,
                     DatumKomentara = DateTime.Now,
-                    SadrzajKomentara = "Knjiga je dosadna!"
+                    SadrzajKomentara = "Knjiga je užasno dosadna!"
                 },
                 new KorisnikKnjigaKomentar
                 {
@@ -236,11 +233,11 @@ namespace eLibrary.Database
                  {
                      Knjiga_ID = 1,
                      NazivKnjige = "Na Drini cuprija",
-                     Slika = null,
+                     Slika = File.ReadAllBytes("Assets/nadrinicuprija.jpg"),
                      Cijena = 49.99,
                      Ocjena = 5.0,
                      Opis = "Priča počinje s uvjetima života u Višegradu prije nego što je most sagrađen, a onda se nastavlja na njegovu izgradnju u 16. stoljeću. Nakon toga govori o životu u kasabi koji je usko vezan uz most. Preko njega prolaze putnici, trgovci i mještani. Svaki veliki događaj, bio sretan ili ne, obilježava se prelaskom preko mosta. ",
-                     PDF = "NaDrinicuprija.pdf",
+                     PDF = "nadrinicuprija.pdf",
                      PDFDodan = true,
                      DatumIzdavanja = DateTime.Now,
                      Pisac_ID=1,
@@ -253,11 +250,11 @@ namespace eLibrary.Database
                  {
                      Knjiga_ID = 2,
                      NazivKnjige = "Dnevnik Ane Frank",
-                     Slika = null,
+                     Slika = File.ReadAllBytes("Assets/dnevnikanefrank.jpg"),
                      Cijena = 39.99,
                      Ocjena = 4.7,
                      Opis = "Annin dnevnik pisan je u vremenskom razdoblju od 1942 do 1944. godine, najteža vremena Drugog svjetskog rata u Europi. Kamo god krenuli, Hitlerova je vojska širila otrov antisemitizma i rasne mržnje. ",
-                     PDF = "DnevnikAneFrank.pdf",
+                     PDF = "dnevnikanefrank.pdf",
                      PDFDodan = true,
                      DatumIzdavanja = DateTime.Now,
                      Pisac_ID=2,
@@ -267,15 +264,16 @@ namespace eLibrary.Database
                  {
                      Knjiga_ID = 3,
                      NazivKnjige = "Pjesme",
-                     Slika = null,
+                     Slika = File.ReadAllBytes("Assets/pjesme.jpg"),
                      Cijena = 10,
                      Ocjena = 4.4,
                      Opis = "Ovo su pjesme Sidran Abdulaha ",
-                     PDF = "PJesme-Abdulah-Sidran.pdf",
+                     PDF = "1001noc.pdf",
                      PDFDodan = true,
                      DatumIzdavanja = DateTime.Now,
                      Pisac_ID=3,
-                     Zanr_ID=3
+                     Zanr_ID=3,
+                     
                  }
                  );
         }

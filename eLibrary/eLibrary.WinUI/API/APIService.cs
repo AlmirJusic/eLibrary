@@ -23,16 +23,32 @@ namespace eLibrary.WinUI.API
         public async Task<T> Get<T>(object searchrequest)
         {
             var url = $"{Properties.Settings.Default.ApiURL}/{_route}";
-            
 
-            if (searchrequest!=null)
+            try
             {
-                url += "?";
-                url += await searchrequest.ToQueryString();
-                
+                if (searchrequest != null)
+                {
+                    url += "?";
+                    url += await searchrequest.ToQueryString();
+
+                }
+                var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+                return result;
             }
-            var result = await url.WithBasicAuth(Username,Password).GetJsonAsync<T>();
-            return result;
+            catch (FlurlHttpException ex)
+            {
+                if (ex.Call.Response.StatusCode == 401)
+                {
+                    MessageBox.Show("Neuspješna autentifikacija.");
+                    return default;
+                }
+                if (ex.Call.Response.StatusCode == 403)
+                {
+                    MessageBox.Show("Nemate permisije za pristup ovom resursu.");
+                    return default;
+                }
+                throw;
+            }
         }
         public async Task<T> GetById<T>(object id)
         {

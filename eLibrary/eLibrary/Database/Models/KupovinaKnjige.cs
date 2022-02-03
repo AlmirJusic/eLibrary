@@ -21,9 +21,7 @@ namespace eLibrary.Database.Models
         public int Knjiga_ID { get; set; }
         public virtual Knjiga Knjiga { get; set; }
 
-        [ForeignKey(nameof(Placanje))]
-        public int Placanje_ID { get; set; }
-        public virtual Placanje Placanje { get; set; }
+        
 
         public bool? Odobreno { get; set; }
 

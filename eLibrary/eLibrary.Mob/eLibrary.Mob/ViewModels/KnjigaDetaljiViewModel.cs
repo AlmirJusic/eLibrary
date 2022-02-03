@@ -1,4 +1,5 @@
 ﻿using eLibrary.Mob.Services;
+using eLibrary.Mob.Views;
 using eLibrary.ModelForMobile;
 using eLibrary.ModelForMobile.Requests.KorisnikKnjigaKomentar;
 using System;
@@ -63,7 +64,7 @@ namespace eLibrary.Mob.ViewModels
         public async Task Kupi()
         {
 
-            //await Navigation.PushAsync(new PaymentPage(EKnjiga));
+            await Navigation.PushAsync(new PlacanjePage(knjiga));
 
         }
 
