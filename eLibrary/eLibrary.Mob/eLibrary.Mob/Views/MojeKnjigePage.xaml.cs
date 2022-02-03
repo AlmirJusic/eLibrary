@@ -31,5 +31,6 @@ namespace eLibrary.Mob.Views
             var item = e.SelectedItem as Knjiga;
             await Navigation.PushAsync(new MojeKnjigeDetaljiPage(item));
         }
+        
     }
 }

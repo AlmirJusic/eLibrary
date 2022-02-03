@@ -16,8 +16,8 @@ namespace eLibrary.Mob.ViewModels
     public class KorisnickiProfilUrediViewModel:BaseViewModel
     {
 
-        //private readonly APIService _gradovi = new APIService("Grad");
-        //private readonly APIService _spolovi = new APIService("Spol");
+        private readonly APIService _gradovi = new APIService("Grad");
+        private readonly APIService _spolovi = new APIService("Spol");
         private readonly APIService _korisnici = new APIService("Korisnik");
         public KorisnickiProfilUrediViewModel()
         {
@@ -39,35 +39,41 @@ namespace eLibrary.Mob.ViewModels
         DateTime _datumRodjenja = DateTime.UtcNow;
         public DateTime DatumRodjenja { get { return _datumRodjenja; } set { SetProperty(ref _datumRodjenja, value); } }
 
-        //ObservableCollection<Grad> _Gradovi = new ObservableCollection<Grad>();
-        //public ObservableCollection<Grad> Gradovi
-        //{
-        //    get { return _Gradovi; }
-        //    set { SetProperty(ref _Gradovi, value); }
-        //}
-        //private Grad _selectedGrad;
-        //public Grad SelectedGrad
-        //{
-        //    get { return _selectedGrad; }
-        //    set { SetProperty(ref _selectedGrad, value);
-        //    }
-        //}
+        ObservableCollection<Grad> _Gradovi = new ObservableCollection<Grad>();
+        public ObservableCollection<Grad> Gradovi
+        {
+            get { return _Gradovi; }
+            set { SetProperty(ref _Gradovi, value); }
+        }
+        private Grad _selectedGrad;
+        public Grad SelectedGrad
+        {
+            get { return _selectedGrad; }
+            set
+            {
+                SetProperty(ref _selectedGrad, value);
+            }
+        }
 
-        //ObservableCollection<Spol> _Spolovi = new ObservableCollection<Spol>();
-        //public ObservableCollection<Spol> Spolovi
-        //{
-        //    get { return _Spolovi; }
-        //    set { SetProperty(ref _Spolovi, value);
-        //    }
-        //}
-        //private Spol _selectedSpol;
-        //public Spol SelectedSpol
-        //{
-        //    get { return _selectedSpol; }
-        //    set { SetProperty(ref _selectedSpol, value);
-                
-        //    }
-        //}
+        ObservableCollection<Spol> _Spolovi = new ObservableCollection<Spol>();
+        public ObservableCollection<Spol> Spolovi
+        {
+            get { return _Spolovi; }
+            set
+            {
+                SetProperty(ref _Spolovi, value);
+            }
+        }
+        private Spol _selectedSpol;
+        public Spol SelectedSpol
+        {
+            get { return _selectedSpol; }
+            set
+            {
+                SetProperty(ref _selectedSpol, value);
+
+            }
+        }
 
         string _email = string.Empty;
         public string Email { get { return _email; } set { SetProperty(ref _email, value); } }
@@ -98,27 +104,27 @@ namespace eLibrary.Mob.ViewModels
                     Prezime = item.Prezime;
                     DatumRodjenja = item.DatumRodjenja;
                     Email = item.Email;
-                    //SelectedGrad = item.Grad;
-                    //SelectedSpol = item.Spol;
+                    SelectedGrad = item.Grad;
+                    SelectedSpol = item.Spol;
                     Username = item.Username;
                     Slika = item.Slika;
                 }
             }
 
 
-            //var gradovi = await _gradovi.Get<List<Grad>>(null); ;
-            //_Gradovi.Clear();
-            //foreach (var item in gradovi)
-            //{
-            //    _Gradovi.Add(item);
-            //}
+            var gradovi = await _gradovi.Get<List<Grad>>(null); ;
+            _Gradovi.Clear();
+            foreach (var item in gradovi)
+            {
+                _Gradovi.Add(item);
+            }
 
-            //var spolovi = await _spolovi.Get<List<Spol>>(null); ;
-            //_Spolovi.Clear();
-            //foreach (var item in spolovi)
-            //{
-            //    _Spolovi.Add(item);
-            //}
+            var spolovi = await _spolovi.Get<List<Spol>>(null); ;
+            _Spolovi.Clear();
+            foreach (var item in spolovi)
+            {
+                _Spolovi.Add(item);
+            }
 
 
         }
@@ -187,6 +193,7 @@ namespace eLibrary.Mob.ViewModels
                 await Application .Current.MainPage.DisplayAlert("Greška", "Odaberite datum!", "OK");
                 return false;
             }
+            
             else
             {
                 return true;
@@ -217,10 +224,10 @@ namespace eLibrary.Mob.ViewModels
                     Email = _email,
                     Username = _username,
                     DatumRodjenja = _datumRodjenja,
-                    /*
+                    
                     Grad_ID = _selectedGrad.Grad_ID,
                     Spol_ID = _selectedSpol.Spol_ID,
-                    */
+                    
                     Uloga_ID = 2,
                     Slika = _slika,
                     
@@ -229,8 +236,8 @@ namespace eLibrary.Mob.ViewModels
                 }) ;
 
                 
-                    await Application.Current.MainPage.DisplayAlert("OK", "Uspješno ste uredili korisnika", "OK");
-                    
+                await Application.Current.MainPage.DisplayAlert("OK", "Uspješno ste uredili profil. Logirajte se ponovo!!", "OK");
+                
                     
                     
                 

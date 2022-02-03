@@ -11,7 +11,11 @@ using System.Threading.Tasks;
 
 namespace eLibrary.Controllers
 {
-    
+    //[Authorize]
+    ////govori da pozivi u ovom kontroleru trebaju biti logirani, naprotiv vraca 401
+    ////ako to nema, pozivi su otvoreni za izvrsavanje
+    /////takodjer "puca" na dijelu registracije mobilne aplikacije...error 401 ne moze se registrovi, ako predthodno nije prijavljen
+    // sto nije logicno!
     [Route("api/[controller]")]
     [ApiController]
     public class KorisnikController : ControllerBase
@@ -37,20 +41,20 @@ namespace eLibrary.Controllers
         {
             return _service.Insert(request);
         }
-
+        
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
             _service.Delete(id);
         }
 
-        [Authorize]
+        
         [HttpPut("{id}")]
         public Model.Korisnik Update(int id, [FromBody] KorisnikUpdateRequest request)
         {
             return _service.Update(id, request);
         }
-        [Authorize]
+        
         [HttpGet("{id}")]
         public Model.Korisnik GetById(int id)
         {

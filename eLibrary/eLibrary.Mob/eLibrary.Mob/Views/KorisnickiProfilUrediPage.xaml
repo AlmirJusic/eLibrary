@@ -49,8 +49,8 @@
                     <Entry Text="{Binding Password }" IsPassword="True" />
                     <Label Text="Povrdi password:" FontAttributes="Bold"/>
                     <Entry Text="{Binding PasswordConfirm}" IsPassword="True" />
-
 -->
+
 
 
                     <Button BackgroundColor="DodgerBlue" BorderColor="Transparent"

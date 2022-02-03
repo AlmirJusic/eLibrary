@@ -293,8 +293,8 @@ namespace eLibrary.Database
                      Username = "admin",
                      Grad_ID = 1,
                      Slika= File.ReadAllBytes("Assets/user1.jpg"),
-                     PasswordHash = "VBuAbDHw4VpNmit99/1kQD6iHdc=",
-                     PasswordSalt = "vlB5aDodOZ9CzpJgJb2YTw=="
+                     PasswordHash = "YAWTUq0ie8c0tBtxDe8Cv5BcEkU=",
+                     PasswordSalt = "2347UVaXDf0JXS/13WCCdg=="
                  },
                  new Korisnik
                  {
@@ -308,8 +308,8 @@ namespace eLibrary.Database
                      Username = "korisnik",
                      Grad_ID = 3,
                      Slika = File.ReadAllBytes("Assets/user2.jpg"),
-                     PasswordHash = "cfYKzFiOX9/2wn+uO0D+eQpVC6Q=",
-                     PasswordSalt = "xgZcl8UKsYKT6W/UVNAQ5A=="
+                     PasswordHash = "S27pePLiy7wnHja89giP/L4RQ6s=",
+                     PasswordSalt = "S5felu6ihLLEtjNKQZMaSA=="
                  },
                  new Korisnik
                  {
@@ -323,8 +323,8 @@ namespace eLibrary.Database
                      Username = "almir",
                      Grad_ID = 3,
                      Slika = File.ReadAllBytes("Assets/user3.jpg"),
-                     PasswordHash = "Uc6V3AKyDPojPD7/DUOOgxj/J4g=",
-                     PasswordSalt = "4WBY01YbHGSswAHe68uTBg=="
+                     PasswordHash = "Y/rtFbnRSgQ53PX3+w9lEoqiJ2s=",
+                     PasswordSalt = "WqHzH1hIBtmsewpNDEpeGg=="
                  }
                  );
         }

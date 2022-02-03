@@ -33,6 +33,7 @@ namespace eLibrary.Mob.Views
         private async void Spremi_Clicked(object sender, EventArgs e)
         {
             await model.Uredi();
+            await Navigation.PushModalAsync(new LoginPage());
             
         }
 

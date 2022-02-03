@@ -24,31 +24,16 @@ namespace eLibrary.WinUI.API
         {
             var url = $"{Properties.Settings.Default.ApiURL}/{_route}";
 
-            try
+            
+            if (searchrequest != null)
             {
-                if (searchrequest != null)
-                {
-                    url += "?";
-                    url += await searchrequest.ToQueryString();
+                url += "?";
+                url += await searchrequest.ToQueryString();
 
-                }
-                var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
-                return result;
             }
-            catch (FlurlHttpException ex)
-            {
-                if (ex.Call.Response.StatusCode == 401)
-                {
-                    MessageBox.Show("Neuspješna autentifikacija.");
-                    return default;
-                }
-                if (ex.Call.Response.StatusCode == 403)
-                {
-                    MessageBox.Show("Nemate permisije za pristup ovom resursu.");
-                    return default;
-                }
-                throw;
-            }
+            var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+            return result;
+            
         }
         public async Task<T> GetById<T>(object id)
         {

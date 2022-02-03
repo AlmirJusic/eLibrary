@@ -46,7 +46,6 @@ namespace eLibrary.WinUI.Forms.Korisnici
             this.cmbSpol = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbUloga = new System.Windows.Forms.ComboBox();
-            this.btnGrad = new System.Windows.Forms.Button();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.btnSpremi = new System.Windows.Forms.Button();
@@ -194,15 +193,6 @@ namespace eLibrary.WinUI.Forms.Korisnici
             this.cmbUloga.Size = new System.Drawing.Size(112, 23);
             this.cmbUloga.TabIndex = 14;
             // 
-            // btnGrad
-            // 
-            this.btnGrad.Location = new System.Drawing.Point(176, 221);
-            this.btnGrad.Name = "btnGrad";
-            this.btnGrad.Size = new System.Drawing.Size(24, 23);
-            this.btnGrad.TabIndex = 16;
-            this.btnGrad.Text = "+";
-            this.btnGrad.UseVisualStyleBackColor = true;
-            // 
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
@@ -285,7 +275,6 @@ namespace eLibrary.WinUI.Forms.Korisnici
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.lblConfirmPassword);
             this.Controls.Add(this.txtConfirmPassword);
-            this.Controls.Add(this.btnGrad);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbUloga);
             this.Controls.Add(this.label7);
@@ -331,7 +320,6 @@ namespace eLibrary.WinUI.Forms.Korisnici
         private System.Windows.Forms.ComboBox cmbSpol;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbUloga;
-        private System.Windows.Forms.Button btnGrad;
         private System.Windows.Forms.Label lblConfirmPassword;
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Button btnSpremi;

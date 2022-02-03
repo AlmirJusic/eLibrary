@@ -18,7 +18,7 @@ namespace eLibrary.WinUI.Forms
         public frmLogin()
         {
             InitializeComponent();
-            txtPassword.Text = "admin";
+            txtPassword.Text = "test";
             txtUsername.Text = "admin";
         }
 

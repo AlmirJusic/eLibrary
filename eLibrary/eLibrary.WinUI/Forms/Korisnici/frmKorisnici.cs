@@ -11,6 +11,7 @@ using Flurl.Http;
 using Flurl;
 using eLibrary.WinUI.API;
 using eLibrary.Model.Requests.Korisnik;
+using eLibrary.Model;
 
 namespace eLibrary.WinUI.Forms.Korisnici
 {
@@ -18,6 +19,10 @@ namespace eLibrary.WinUI.Forms.Korisnici
     {
         private readonly APIService _korisnici=new APIService("Korisnik");
         private readonly APIService _uloge = new APIService("Uloga");
+        private readonly APIService _kupovine = new APIService("KupovinaKnjige");
+        private readonly APIService _prijedlozi = new APIService("PrijedlogKnjige");
+        private readonly APIService _komentari = new APIService("KorisnikKnjigaKomentar");
+        private readonly APIService _ocjene = new APIService("KorisnikKnjigaOcjena");
         public frmKorisnici()
         {
             InitializeComponent();
@@ -92,34 +97,61 @@ namespace eLibrary.WinUI.Forms.Korisnici
         {
             var item = dgvKorisnici.SelectedRows[0].DataBoundItem as Model.Korisnik;
 
-            //var korisnici = await _korisnici.Get<List<Model.Korisnik>>(null);
-            //var pisci = await _pisci.Get<List<Model.Pisac>>(null);
+            
 
 
             if (e.ColumnIndex == 8)
             {
-                /*
-                foreach (var i in korisnici)
-                {
-                    if (i.Grad_ID == item.Grad_ID)
-                    {
-                        MessageBox.Show("Nije moguće izbrisati grad zbog konzistentnosti podataka!!!");
-                        return;
-                    }
-                }
-                foreach (var i in pisci)
-                {
-                    if (i.Grad_ID == item.Grad_ID)
-                    {
-                        MessageBox.Show("Nije moguće izbrisati grad zbog konzistentnosti podataka!!!");
-                        return;
-                    }
-                }
-                */
+                
                 DialogResult result = MessageBox.Show("Da li ste sigurni da želite izbrisati korisnika  >" + item.Ime +" "+item.Prezime+ "< ?", "Upozorenje", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
+                    var prijedlog = await _prijedlozi.Get<List<eLibrary.Model.PrijedlogKnjige>>(null);
+                    var ocjena = await _ocjene.Get<List<eLibrary.Model.KorisnikKnjigaOcjena>>(null);
+                    var kupovina = await _kupovine.Get<List<KupovinaKnjige>>(null);
+                    var komentar = await _komentari.Get<List<eLibrary.Model.KorisnikKnjigaKomentar>>(null);
+                    
 
+                    if (kupovina != null)
+                    {
+                        foreach (var i in kupovina)
+                        {
+                            if (i.Korisnik_ID ==item.Korisnik_ID )
+                            {
+                                await _kupovine.Delete<Model.KupovinaKnjige>(i.KupovinaKnjige_ID);
+                            }
+                        }
+                    }
+                    if (komentar != null)
+                    {
+                        foreach (var i in komentar)
+                        {
+                            if (i.Korisnik_ID == item.Korisnik_ID)
+                            {
+                                await _komentari.Delete<Model.KorisnikKnjigaKomentar>(i.KorisnikKnjigaKomentar_ID);
+                            }
+                        }
+                    }if (ocjena != null)
+                    {
+                        foreach (var i in ocjena)
+                        {
+                            if (i.Korisnik_ID == item.Korisnik_ID)
+                            {
+                                await _ocjene.Delete<Model.KorisnikKnjigaOcjena>(i.KorisnikKnjigaOcjena_ID);
+                            }
+                        }
+                    }
+                    if (prijedlog != null)
+                    {
+                        foreach (var i in prijedlog)
+                        {
+                            if (i.Korisnik_ID == item.Korisnik_ID)
+                            {
+                                await _prijedlozi.Delete<Model.PrijedlogKnjige>(i.PrijedlogKnjige_ID);
+                            }
+                        }
+                    }
+                    
                     await _korisnici.Delete<Model.Korisnik>(item.Korisnik_ID);
                     //dgvKorisnici.DataSource = await _korisnici.Get<List<Model.Korisnik>>(null);
                     await LoadKorisnici();

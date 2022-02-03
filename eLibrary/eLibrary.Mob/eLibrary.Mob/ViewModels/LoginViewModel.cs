@@ -17,7 +17,7 @@ namespace eLibrary.Mob.ViewModels
         public string Username{get { return _username; }set { SetProperty(ref _username, value); }}
 
         //string _password = string.Empty;
-        string _password = "korisnik";
+        string _password = "test";
         public string Password { get { return _password; } set { SetProperty(ref _password, value); } }
 
 

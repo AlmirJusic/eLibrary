@@ -34,35 +34,16 @@ namespace eLibrary.Mob.Services
         {
             var url = $"{_apiURL}/{_route}";
 
-            try
+            
+            if (searchrequest != null)
             {
-                if (searchrequest != null)
-                {
-                    url += "?";
-                    url += await searchrequest.ToQueryString();
-                
-                }
-                var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
-                return result;
+                url += "?";
+                url += await searchrequest.ToQueryString();
+            
             }
-            catch (FlurlHttpException ex)
-            {
-                if (ex.Call.Response.StatusCode == 401)
-                {
-                    //MessageBox.Show("Neuspješna autentifikacija.");
-                    await Application.Current.MainPage.DisplayAlert("Greška", "Neuspješna autentifikacija.", "OK");
-                    Application.Current.MainPage = new LoginPage();
-                    return default;
-                }
-                if (ex.Call.Response.StatusCode == 403)
-                {
-                    //MessageBox.Show("Nemate permisije za pristup ovom resursu.");
-                    await Application.Current.MainPage.DisplayAlert("Greška", "Nemate permisije za pristup ovom resursu.", "OK");
-                    return default;
-                }
-                throw;
-            }
-
+            var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+            return result;
+            
         }
         public async Task<T> GetById<T>(object id)
         {
@@ -78,7 +59,7 @@ namespace eLibrary.Mob.Services
                 if (ex.Call.Response.StatusCode == 401)
                 {
                     //MessageBox.Show("Neuspješna autentifikacija.");
-                    await Application.Current.MainPage.DisplayAlert("Greška","Neuspješna autentifikacija.","OK");
+                    //await Application.Current.MainPage.DisplayAlert("Greška","Neuspješna autentifikacija.","OK");
                     Application.Current.MainPage = new LoginPage();
                     return default;
                 }
@@ -105,7 +86,7 @@ namespace eLibrary.Mob.Services
                 if (ex.Call.Response.StatusCode == 401)
                 {
                     //MessageBox.Show("Neuspješna autentifikacija.");
-                    await Application.Current.MainPage.DisplayAlert("Greška", "Neuspješna autentifikacija.", "OK");
+                    //await Application.Current.MainPage.DisplayAlert("Greška", "Neuspješna autentifikacija.", "OK");
                     Application.Current.MainPage = new LoginPage();
                     return default;
                 }
@@ -132,7 +113,7 @@ namespace eLibrary.Mob.Services
                 if (ex.Call.Response.StatusCode == 401)
                 {
                     //MessageBox.Show("Neuspješna autentifikacija.");
-                    await Application.Current.MainPage.DisplayAlert("Greška", "Neuspješna autentifikacija.", "OK");
+                    //await Application.Current.MainPage.DisplayAlert("Greška", "Neuspješna autentifikacija.", "OK");
                     Application.Current.MainPage = new LoginPage();
                     return default;
                 }
@@ -159,7 +140,7 @@ namespace eLibrary.Mob.Services
                 if (ex.Call.Response.StatusCode == 401)
                 {
                     //MessageBox.Show("Neuspješna autentifikacija.");
-                    await Application.Current.MainPage.DisplayAlert("Greška", "Neuspješna autentifikacija.", "OK");
+                    //await Application.Current.MainPage.DisplayAlert("Greška", "Neuspješna autentifikacija.", "OK");
                     Application.Current.MainPage = new LoginPage();
                     return default;
                 }
