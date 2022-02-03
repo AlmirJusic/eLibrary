@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converters="clr-namespace:eLibrary.Mob.Converters" xmlns:vm="clr-namespace:eLibrary.Mob.ViewModels"
+             x:Class="eLibrary.Mob.Views.KnjigePage">
+
+    <ContentPage.BindingContext>
+        <vm:KnjigeViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Knjige"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Picker ItemsSource="{Binding ZanroviList}" SelectedItem="{Binding SelectedZanr}" ItemDisplayBinding="{Binding NazivZanra}"></Picker>
+            
+            <ListView ItemsSource="{Binding KnjigeList}" ItemSelected="ListView_OnItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout Padding="10" Orientation="Horizontal"  Spacing="15">
+                               <StackLayout BackgroundColor="Gray">
+                                    <Image   HeightRequest="200" WidthRequest="150"   Source="{Binding Slika, Converter={StaticResource imgConv}}"></Image>
+                                </StackLayout>
+
+                                
+
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                                    <StackLayout Orientation="Horizontal" Spacing="10">
+                                        <Label Text="Naziv knjige:" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="16" />
+
+                                        <Label Text="{Binding NazivKnjige}" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="End"
+                                               
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="10">
+
+                                        <Label Text="Pisac:" 
+                                           LineBreakMode="NoWrap" 
+                                                VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="16" />
+
+                                        <Label Text="{Binding Pisac}" 
+                                           LineBreakMode="NoWrap"
+                                               VerticalTextAlignment="End"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="21" />
+                                    </StackLayout>
+                                    <StackLayout  Orientation="Horizontal" Spacing="10">
+                                        <Label Text="Žanr:" 
+                                           LineBreakMode="NoWrap" 
+                                                VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="16" />
+                                        <Label Text="{Binding Zanr}" 
+                                           LineBreakMode="NoWrap"
+                                                VerticalTextAlignment="End"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="21" />
+                                    </StackLayout>
+                                    <StackLayout  Orientation="Horizontal" Spacing="10">
+                                        <Label Text="Ocjena :" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                               
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="16" />
+                                        <Label Text="{Binding Ocjena}" 
+                                           LineBreakMode="NoWrap"
+                                                VerticalTextAlignment="End"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="21" />
+                                    </StackLayout>
+                                    
+                                    
+                                    
+
+
+                                </StackLayout>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

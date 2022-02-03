@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converters="clr-namespace:eLibrary.Mob.Converters" xmlns:vm="clr-namespace:eLibrary.Mob.ViewModels"
+             x:Class="eLibrary.Mob.Views.KnjigaDetealjiPage">
+
+
+    <ContentPage.BindingContext>
+        <vm:KnjigaDetaljiViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Gray"  >
+
+
+                <Image x:Name="Slika"  HeightRequest="200" WidthRequest="150"  Source="{Binding knjiga.Slika, Converter={StaticResource imgConv}}"  ></Image>
+                <Button Command="{Binding KupiCommand}" Text="Kupi knjigu"  WidthRequest="20"  HeightRequest="40" BackgroundColor="DodgerBlue" TextColor="Black" FontSize="Medium"></Button>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="Black" Orientation="Vertical">
+                <StackLayout Spacing="15" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Naziv knjige :" 
+                                LineBreakMode="NoWrap" 
+                                VerticalTextAlignment="Center"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                    <Label Text="{Binding   knjiga.NazivKnjige}"    VerticalTextAlignment="Center" FontSize="21">
+
+                    </Label>
+                </StackLayout>
+                <StackLayout Spacing="10" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Cijena:" 
+                                LineBreakMode="NoWrap" 
+                                VerticalTextAlignment="Center"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+
+                    <Label Text="{Binding knjiga.Cijena}"  FontSize="21"
+                         VerticalTextAlignment="Center" >
+
+                    </Label>
+                    <Label Text="KM"   FontSize="20"
+                         
+                            VerticalTextAlignment="Center"
+                           >
+
+                    </Label>
+                </StackLayout>
+                <StackLayout Spacing="10" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Pisac:" 
+                                LineBreakMode="NoWrap" 
+                                VerticalTextAlignment="Center"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+
+                    <Label Text="{Binding knjiga.Pisac}" FontSize="21"
+                           VerticalTextAlignment="Center">
+
+                    </Label>
+                </StackLayout>
+                <StackLayout Spacing="10" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Ocjena:" 
+                                LineBreakMode="NoWrap" 
+                                VerticalTextAlignment="Center"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+
+                    <Label Text="{Binding knjiga.Ocjena}" FontSize="21"
+                           VerticalTextAlignment="Center">
+
+                    </Label>
+
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal" Spacing="10" Padding="5" VerticalOptions="FillAndExpand" >
+
+                    <Label Text="Opis:" 
+                                LineBreakMode="NoWrap" 
+                                WidthRequest="310"
+                                VerticalTextAlignment="Center"
+                           
+                                FontAttributes="Bold"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+
+                    <Label Text="{Binding knjiga.Opis}" 
+                                LineBreakMode="WordWrap"
+                                VerticalTextAlignment="Start"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                HeightRequest="220"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="8"
+                                FontAttributes="Bold"
+                         
+                               />
+                </StackLayout>
+
+
+            </StackLayout>
+            <StackLayout Margin="5" Grid.Row="2" Grid.ColumnSpan="2" BackgroundColor="DodgerBlue"  >
+                <Label Text="Komentari" TextColor="White" FontSize="Large" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+            <StackLayout Grid.Row="3" Grid.Column="0" WidthRequest="250">
+
+
+                <Entry Text="{Binding Komentar }">
+
+                </Entry>
+
+
+            </StackLayout>
+            <StackLayout Grid.Row="3" Grid.Column="1" WidthRequest="20">
+
+
+                <Button Command="{Binding DodajCommand}" Text="Dodaj"  HeightRequest="30" WidthRequest="20" BackgroundColor="DodgerBlue" TextColor="White" FontSize="15" ></Button>
+
+
+            </StackLayout>
+            <StackLayout Grid.Row="4" Grid.ColumnSpan="2">
+                <ListView  ItemsSource="{Binding KomentariList}" SelectedItem="{Binding SelectedKomentar}"   >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <StackLayout Padding="10" Orientation="Horizontal" Spacing="20" Grid.Row="3" Grid.Column="0" >
+
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding SadrzajKomentara}" 
+                                           LineBreakMode="MiddleTruncation" 
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="18"
+                                               TextColor="White"/>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding  DatumKomentara}" 
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="13" />
+                                            <Label Text="{Binding Korisnik.Username} " 
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="13" />
+                                        </StackLayout>
+
+
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal"  Grid.Row="3" Grid.Column="1" >
+                                        <Button  Clicked="Button_Clicked" Text="Izbriši" BackgroundColor="DodgerBlue" TextColor="White">
+
+                                        </Button>
+                                    </StackLayout>
+                                    
+
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

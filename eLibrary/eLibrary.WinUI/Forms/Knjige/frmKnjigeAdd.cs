@@ -118,8 +118,8 @@ namespace eLibrary.WinUI.Forms.Knjige
                     Opis = txtOpis.Text,
                     DatumIzdavanja = DateTime.Parse(dateTimePicker1.Value.ToShortDateString()),
                     PDFDodan = cbPDF.Checked,
-                 
 
+                    PDF = pdfFajl,
                     Pisac_ID = (cmbPisac.SelectedItem as Model.Pisac).Pisac_ID,
                     Zanr_ID = (cmbZanr.SelectedItem as Model.Zanr).Zanr_ID,
 
@@ -224,6 +224,34 @@ namespace eLibrary.WinUI.Forms.Knjige
             }
 
             return true;
+        }
+        string pdfFajl = null;
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            var result = ofdPDF.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+
+                var filename = ofdPDF.FileName;
+
+                string[] f = filename.Split('\\');
+
+                string fn = f[(f.Length) - 1];
+                string startuppath = Path.GetDirectoryName(Application.ExecutablePath).Replace("eLibrary.WinUI\\bin\\Debug\\net5.0-windows", string.Empty); ;
+                string filepath = "eLibrary.Mob\\eLibrary.Mob.UWP\\bin\\x86\\Debug\\AppX\\Assets\\";
+
+
+                string dest = startuppath + filepath + fn;
+
+                pdfFajl = fn;
+                File.Copy(filename, dest, true);
+                cbPDF.Checked = true;
+
+            }
+
+
+            //C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\bin\x86\Debug\AppX
+            //C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.WinUI\bin\Debug\net5.0-windows
         }
     }
 }

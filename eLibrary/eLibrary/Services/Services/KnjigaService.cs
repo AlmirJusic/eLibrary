@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using eLibrary.Database;
+using eLibrary.Database.Models;
 using eLibrary.Model.Requests.Knjiga;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -37,5 +38,7 @@ namespace eLibrary.Services.Services
             var list = query.ToList();
             return _mapper.Map<List<eLibrary.Model.Knjiga>>(list);
         }
+        
+        
     }
 }

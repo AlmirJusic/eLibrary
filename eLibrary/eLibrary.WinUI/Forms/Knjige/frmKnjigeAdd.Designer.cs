@@ -189,6 +189,7 @@ namespace eLibrary.WinUI.Forms.Knjige
             this.btnPDF.TabIndex = 16;
             this.btnPDF.Text = "PDF";
             this.btnPDF.UseVisualStyleBackColor = true;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
             // ofdPDF
             // 

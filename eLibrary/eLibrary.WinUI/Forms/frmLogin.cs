@@ -31,12 +31,13 @@ namespace eLibrary.WinUI.Forms
 
                 try
                 {
-                    await _korisnici.Get<dynamic>(null);
-                    List<Model.Korisnik> listKorisnici = await _korisnici.Get<List<Model.Korisnik>>(new KorisnikSearchRequest() { Username = APIService.Username });
+                    
+                    List<Model.Korisnik> listKorisnici = await _korisnici.Get<List<Model.Korisnik>>(new KorisnikSearchRequest() { Username = APIService.Username});
                     APIService.LogiraniKorisnik = listKorisnici.Where(x => x.Username == APIService.Username).FirstOrDefault();
 
                     if (APIService.LogiraniKorisnik.Uloga.NazivUloge == "Administrator")
                     {
+                        await _korisnici.Get<dynamic>(null);
 
                         frmIndex frm = new frmIndex();
                         DialogResult = DialogResult.OK;
@@ -58,6 +59,8 @@ namespace eLibrary.WinUI.Forms
 
         }
 
+        
+
         private bool Validacija()
         {
             if (string.IsNullOrEmpty(txtUsername.Text))
@@ -72,6 +75,8 @@ namespace eLibrary.WinUI.Forms
                 return false;
             }
             else errorProvider1.Clear();
+
+            
 
             return true;
         }

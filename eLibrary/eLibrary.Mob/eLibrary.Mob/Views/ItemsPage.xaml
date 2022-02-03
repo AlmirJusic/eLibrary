@@ -21,14 +21,14 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="10" x:DataType="model:Item">
-                        <Label Text="{Binding Text}" 
+                        <!--<Label Text="{Binding Text}" 
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListItemTextStyle}" 
                             FontSize="16" />
                         <Label Text="{Binding Description}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
+                            FontSize="13" />-->
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
@@ -41,4 +41,5 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
     </RefreshView>
+    <Label Text="eLibrary 2022" HorizontalOptions="Center" TextColor="White"  FontSize="50" VerticalOptions="Center"></Label>
 </ContentPage>

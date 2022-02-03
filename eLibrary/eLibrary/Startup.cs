@@ -103,6 +103,7 @@ namespace eLibrary
             services.AddScoped<ICRUDService<eLibrary.Model.Placanje, PlacanjeSearchRequest,PlacanjeInsertRequest, PlacanjeInsertRequest>, PlacanjeService>();
             services.AddScoped<ICRUDService<eLibrary.Model.KupovinaKnjige, KupovinaKnjigeSearchRequest, KupovinaKnjigeInsertRequest, KupovinaKnjigeInsertRequest>, KupovinaKnjigeService>();
             services.AddScoped<ICRUDService<eLibrary.Model.PrijedlogKnjige, PrijedlogKnjigeSearchRequest, PrijedlogKnjigeInsertRequest, PrijedlogKnjigeInsertRequest>, PrijedlogKnjigeService>();
+            services.AddScoped<IRecommendedService, RecomendedService>();
 
         }
 
@@ -117,7 +118,7 @@ namespace eLibrary
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "eLibrary v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 

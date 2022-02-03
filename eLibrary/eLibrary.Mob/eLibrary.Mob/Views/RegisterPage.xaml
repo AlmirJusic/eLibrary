@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:eLibrary.Mob.ViewModels"
+             x:Class="eLibrary.Mob.Views.RegisterPage">
+
+    <ContentPage.BindingContext>
+        <vm:RegisterViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label FontSize="Large" Text="Registrujte se besplatno u eLibrary!"
+			HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="0, 0, 0, 50"/>
+
+            <Label Text="Ime" FontSize="Medium"
+                HorizontalOptions="Start" Margin="20, 0, 0, 0"/>
+            <Entry Margin="20, 0, 20, 0" Text="{Binding Ime}" Placeholder="Ime"></Entry>
+
+            <Label Text="Prezime"
+                HorizontalOptions="Start" FontSize="Medium" Margin="20, 0, 0, 0" />
+            <Entry Text="{Binding Prezime}" Margin="20, 0, 20, 0"  Placeholder="Prezime"></Entry>
+
+            <Label Text="Datum rodjenja"
+                HorizontalOptions="Start" FontSize="Medium" Margin="20, 0, 0, 0" />
+            <Entry Text="{Binding DatumRodjenja}" Margin="20, 0, 20, 0"  ></Entry>
+
+            <Label Text="Grad"
+                   HorizontalOptions="Start" FontSize="Medium" Margin="20, 0, 0, 0" />
+            <Picker ItemsSource="{Binding Gradovi}" SelectedItem="{Binding SelectedGrad}" ItemDisplayBinding="{Binding NazivGrada}" Margin="20, 0, 20, 0"></Picker>
+            <Label Text="Spol"
+                   HorizontalOptions="Start" FontSize="Medium" Margin="20, 0, 0, 0" />
+            <Picker ItemsSource="{Binding Spolovi}" SelectedItem="{Binding SelectedSpol}" ItemDisplayBinding="{Binding OznakaSpola}" Margin="20, 0, 20, 0"></Picker>
+            
+            
+            <Label Text="Email"
+                HorizontalOptions="Start" FontSize="Medium" Margin="20, 0, 0, 0" />
+            <Entry Text="{Binding Email}" Margin="20, 0, 20, 0"  Placeholder="Email adresa"></Entry>
+            
+            <Label Text="Korisničko ime" FontSize="Medium"
+                HorizontalOptions="Start" Margin="20, 0, 0, 0"/>
+            <Entry Margin="20, 0, 20, 0" Text="{Binding Username}" Placeholder="Vaše korisničko ime"></Entry>
+
+            <Label Text="Password" FontSize="Medium"
+                HorizontalOptions="Start" Margin="20, 0, 0, 0"/>
+            <Entry IsPassword="True" Margin="20, 0, 20, 0" Text="{Binding Password}" Placeholder="Password"></Entry>
+            
+            <Label Text="Potvrdi password" FontSize="Medium"
+                HorizontalOptions="Start" Margin="20, 0, 0, 0"/>
+            <Entry IsPassword="True" Margin="20, 0, 20, 0" Text="{Binding PasswordConfirm}" Placeholder="Potvrdi password"></Entry>
+
+            <Button Command="{Binding RegisterCommand}" Font="Bold,17" Margin="20, 10, 20, 0" Text="Registruj se"></Button>
+
+            <Button  
+                Font="Bold,14" Margin="0, 20, 0, 20" TextColor="CornflowerBlue" BackgroundColor="White"
+                Text="Imate račun? Prijavite se" HorizontalOptions="Center"
+                Clicked="Login_Clicked">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

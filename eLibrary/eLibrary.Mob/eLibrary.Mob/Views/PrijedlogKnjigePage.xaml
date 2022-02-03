@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:eLibrary.Mob.ViewModels"
+             x:Class="eLibrary.Mob.Views.PrijedlogKnjigePage">
+    <ContentPage.BindingContext>
+         <vm:PrijedlogKnjigeViewModel />
+    </ContentPage.BindingContext>
+       
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Start" >
+            <Image HeightRequest="200" WidthRequest="900" HorizontalOptions="Center" x:Name="imgDisp" Source="home.jpg" Margin="0, 10, 0, 0"></Image>
+            <Label FontSize="Large" Text="Predloži nam novu knjigu!"
+			HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="0, 0, 0, 50"/>
+
+            <Label Text="Naziv knjige: " FontSize="Medium"
+                HorizontalOptions="Start" Margin="20, 0, 0, 0"/>
+            <Entry Margin="20, 0, 20, 0" Text="{Binding NazivPrijedlogaKnjige}" Placeholder="Unesite naziv knjige"></Entry>
+
+            <Label Text="Pisac: "
+                HorizontalOptions="Start" FontSize="Medium" Margin="20, 0, 0, 0" />
+            <Entry IsPassword="True" Text="{Binding Pisac}" Margin="20, 0, 20, 0"  Placeholder="Unesite ime i prezime pisca"></Entry>
+
+            <Button Command="{Binding DodajCommand }" Font="Bold,17" Margin="20, 10, 20, 0" Text="Predloži knjigu" BackgroundColor="DodgerBlue"></Button>
+
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

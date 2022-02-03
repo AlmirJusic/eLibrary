@@ -17,5 +17,10 @@ namespace eLibrary.Mob.Views
             InitializeComponent();
             
         }
+
+        private async void Register_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new RegisterPage());
+        }
     }
 }

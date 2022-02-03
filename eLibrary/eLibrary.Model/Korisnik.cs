@@ -25,6 +25,7 @@ namespace eLibrary.Model
         public virtual Uloga Uloga { get; set; }
 
         public string Username { get; set; }
+        public string PasswordHash { get; set; }
         public override string ToString()
         {
             return Username;

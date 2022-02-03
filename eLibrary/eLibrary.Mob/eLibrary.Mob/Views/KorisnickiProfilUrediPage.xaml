@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converters="clr-namespace:eLibrary.Mob.Converters" xmlns:vm="clr-namespace:eLibrary.Mob.ViewModels" xmlns:model="clr-namespace:eLibrary.ModelForMobile;assembly=eLibrary.ModelForMobile"
+             x:Class="eLibrary.Mob.Views.KorisnickiProfilUrediPage">
+
+
+    <ContentPage.BindingContext>
+        <vm:KorisnickiProfilUrediViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20, 10, 20, 0" VerticalOptions="CenterAndExpand">
+                <Label Text="Uredite Vaš profil" FontAttributes="Bold"  FontSize="Title" HorizontalOptions="Center" Margin="0, 0, 0, 10"/>
+
+                <StackLayout>
+
+                    <Frame BorderColor="Black" CornerRadius="0" WidthRequest="200" HorizontalOptions="Center">
+                        <StackLayout HorizontalOptions="Center">
+                            <Image HeightRequest="300" WidthRequest="200" Source="{Binding Slika, Converter={StaticResource imgConv}}"/>
+                        </StackLayout>
+                    </Frame>
+                    
+                    <Button Text="Odaberi sliku" Margin="0, 0, 0, 20" WidthRequest="240" HorizontalOptions="Center" Clicked="slika_clicked" />
+
+                    <Label Text="Ime: "  FontAttributes="Bold"/>
+                    <Entry Text="{Binding Ime}"  />
+                    <Label Text="Prezime:" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Prezime }"  />
+                    <Label Text="Adresa:" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Email}"  />
+                   
+                    <Label Text="Grad:" FontAttributes="Bold"/>
+                    <Picker ItemsSource="{Binding Gradovi}" SelectedItem="{Binding SelectedGrad}" ItemDisplayBinding="{Binding NazivGrada}"></Picker>
+                    <Label Text="Spol:" FontAttributes="Bold"/>
+                    <Picker ItemsSource="{Binding Spolovi}" SelectedItem="{Binding SelectedSpol}" ItemDisplayBinding="{Binding OznakaSpola}" ></Picker>
+
+                    <Label Text="Username:" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Username}"  />
+
+                    <!--
+                    <Label Text="Password:" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Password }" IsPassword="True" />
+                    <Label Text="Povrdi password:" FontAttributes="Bold"/>
+                    <Entry Text="{Binding PasswordConfirm}" IsPassword="True" />
+
+-->
+
+
+                    <Button BackgroundColor="DodgerBlue" BorderColor="Transparent"
+                            HorizontalOptions="FillAndExpand" Text="Spremi promjene" Font="Bold,17" Margin="0, 10, 0, 20"
+                            Clicked="Spremi_Clicked"
+                             />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
