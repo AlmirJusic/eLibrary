@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3'
 
 services:
 #mssql docker
@@ -19,7 +19,7 @@ services:
     build:
       context: .
     environment:
-      - ConnectionStrings:eLibrary=Server=elibrary-sql,1433;Database=IB160088Docker;User=sa;Password=QWElkj132!;ConnectRetryCount=0
+      - ConnectionStrings:eLibrary=Server=elibrary-sql,1433;Database=IB160088Docker;User=sa;Password=QWElkj132!;ConnectRetryCount=254
     ports:
       - 5000:80
     networks:

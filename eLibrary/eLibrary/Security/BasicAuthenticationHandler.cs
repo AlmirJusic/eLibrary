@@ -44,6 +44,7 @@ namespace eLibrary.Security
             if (!Request.Headers.ContainsKey("Authorization"))
                 return AuthenticateResult.Fail("Missing Authorization Header");
 
+            
 
             try
             {
@@ -82,9 +83,7 @@ namespace eLibrary.Security
             claims.Add(new Claim(ClaimTypes.Role, LogiraniKorisnik.Uloga.NazivUloge));
 
 
-            //var identity = new ClaimsIdentity(claims, Scheme.Name);
-            //    var principal = new ClaimsPrincipal(identity);
-            //    var ticket = new AuthenticationTicke
+            
 
             var identity = new ClaimsIdentity(claims, Scheme.Name);
             var principal = new ClaimsPrincipal(identity);

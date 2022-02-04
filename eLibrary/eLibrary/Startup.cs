@@ -53,8 +53,8 @@ namespace eLibrary
             services.AddControllers();
 
             services.AddDbContext<eLibraryContext>(options => options.UseSqlServer(Configuration.GetConnectionString("eLibrary")));
+            
             services.AddAuthentication("BasicAuthentication").AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
-
 
             services.AddSwaggerGen(c =>
             {
@@ -84,7 +84,7 @@ namespace eLibrary
                     }
                 });
             });
-
+            
             services.AddAutoMapper(typeof(Startup));
 
 
@@ -114,10 +114,10 @@ namespace eLibrary
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                
+            }
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "eLibrary v1"));
-            }
-
             //app.UseHttpsRedirection();
 
             app.UseRouting();
