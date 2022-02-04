@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eLibrary.Mob.iOS", "eLibrar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eLibrary.Mob", "eLibrary.Mob\eLibrary.Mob\eLibrary.Mob.csproj", "{490D9D6C-DB79-4811-9058-274EF97A24E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eLibrary.ModelForMobile", "eLibrary.ModelForMobile\eLibrary.ModelForMobile.csproj", "{3F6CFB9D-7361-42B0-B64B-E2ABB1EC8CFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eLibrary.ModelForMobile", "eLibrary.ModelForMobile\eLibrary.ModelForMobile.csproj", "{3F6CFB9D-7361-42B0-B64B-E2ABB1EC8CFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,23 +15,6 @@ namespace eLibrary.Database
         public eLibraryContext()
         {
         }
-
-        public DbSet<Drzava> Drzava { get; set; }
-        public DbSet<Grad> Grad { get; set; }
-        public DbSet<Knjiga> Knjiga { get; set; }
-        public DbSet<Pisac> Pisac { get; set; }
-        public DbSet<Korisnik> Korisnik { get; set; }
-        public DbSet<Spol> Spol { get; set; }
-        public DbSet<Uloga> Uloga { get; set; }
-        public DbSet<KorisnikKnjigaKomentar> KorisnikKnjigaKomentar { get; set; }
-        public DbSet<KorisnikKnjigaOcjena> KorisnikKnjigaOcjena { get; set; }
-        public DbSet<KupovinaKnjige> KupovinaKnjige { get; set; }
-        public DbSet<PrijedlogKnjige> PrijedlogKnjige { get; set; }
-        public DbSet<Zanr> Zanr { get; set; }
-        public DbSet<NacinPlacanja> NacinPlacanja { get; set; }
-        public DbSet<Placanje> Placanje { get; set; }
-
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -70,7 +53,24 @@ namespace eLibrary.Database
             SeedNacinPlacanja(modelBuilder);
             SeedPlacanje(modelBuilder);
             
-        }
+    }
+        public DbSet<Drzava> Drzava { get; set; }
+        public DbSet<Grad> Grad { get; set; }
+        public DbSet<Knjiga> Knjiga { get; set; }
+        public DbSet<Pisac> Pisac { get; set; }
+        public DbSet<Korisnik> Korisnik { get; set; }
+        public DbSet<Spol> Spol { get; set; }
+        public DbSet<Uloga> Uloga { get; set; }
+        public DbSet<KorisnikKnjigaKomentar> KorisnikKnjigaKomentar { get; set; }
+        public DbSet<KorisnikKnjigaOcjena> KorisnikKnjigaOcjena { get; set; }
+        public DbSet<KupovinaKnjige> KupovinaKnjige { get; set; }
+        public DbSet<PrijedlogKnjige> PrijedlogKnjige { get; set; }
+        public DbSet<Zanr> Zanr { get; set; }
+        public DbSet<NacinPlacanja> NacinPlacanja { get; set; }
+        public DbSet<Placanje> Placanje { get; set; }
+
+        
+
 
         private void SeedPlacanje(ModelBuilder modelBuilder)
         {
@@ -233,7 +233,7 @@ namespace eLibrary.Database
                  {
                      Knjiga_ID = 1,
                      NazivKnjige = "Na Drini cuprija",
-                     Slika = File.ReadAllBytes("Assets/nadrinicuprija.jpg"),
+                     Slika = null,
                      Cijena = 49.99,
                      Ocjena = 5.0,
                      Opis = "Priča počinje s uvjetima života u Višegradu prije nego što je most sagrađen, a onda se nastavlja na njegovu izgradnju u 16. stoljeću. Nakon toga govori o životu u kasabi koji je usko vezan uz most. Preko njega prolaze putnici, trgovci i mještani. Svaki veliki događaj, bio sretan ili ne, obilježava se prelaskom preko mosta. ",
@@ -250,7 +250,7 @@ namespace eLibrary.Database
                  {
                      Knjiga_ID = 2,
                      NazivKnjige = "Dnevnik Ane Frank",
-                     Slika = File.ReadAllBytes("Assets/dnevnikanefrank.jpg"),
+                     Slika = null,
                      Cijena = 39.99,
                      Ocjena = 4.7,
                      Opis = "Annin dnevnik pisan je u vremenskom razdoblju od 1942 do 1944. godine, najteža vremena Drugog svjetskog rata u Europi. Kamo god krenuli, Hitlerova je vojska širila otrov antisemitizma i rasne mržnje. ",
@@ -264,7 +264,7 @@ namespace eLibrary.Database
                  {
                      Knjiga_ID = 3,
                      NazivKnjige = "Pjesme",
-                     Slika = File.ReadAllBytes("Assets/pjesme.jpg"),
+                     Slika = null,
                      Cijena = 10,
                      Ocjena = 4.4,
                      Opis = "Ovo su pjesme Sidran Abdulaha ",
@@ -292,7 +292,7 @@ namespace eLibrary.Database
                      Uloga_ID = 1,
                      Username = "admin",
                      Grad_ID = 1,
-                     Slika= File.ReadAllBytes("Assets/user1.jpg"),
+                     Slika= null,
                      PasswordHash = "YAWTUq0ie8c0tBtxDe8Cv5BcEkU=",
                      PasswordSalt = "2347UVaXDf0JXS/13WCCdg=="
                  },
@@ -307,7 +307,7 @@ namespace eLibrary.Database
                      Uloga_ID = 2,
                      Username = "korisnik",
                      Grad_ID = 3,
-                     Slika = File.ReadAllBytes("Assets/user2.jpg"),
+                     Slika = null,
                      PasswordHash = "S27pePLiy7wnHja89giP/L4RQ6s=",
                      PasswordSalt = "S5felu6ihLLEtjNKQZMaSA=="
                  },
@@ -322,7 +322,7 @@ namespace eLibrary.Database
                      Uloga_ID = 1,
                      Username = "almir",
                      Grad_ID = 3,
-                     Slika = File.ReadAllBytes("Assets/user3.jpg"),
+                     Slika = null,
                      PasswordHash = "Y/rtFbnRSgQ53PX3+w9lEoqiJ2s=",
                      PasswordSalt = "WqHzH1hIBtmsewpNDEpeGg=="
                  }
@@ -384,5 +384,6 @@ namespace eLibrary.Database
                 new Drzava { Drzava_ID = 4, NazivDrzave = "Spanija" }
                 );
         }
+        
     }
 }
