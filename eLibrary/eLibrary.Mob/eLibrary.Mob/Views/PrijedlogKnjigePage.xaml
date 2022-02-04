@@ -19,7 +19,7 @@
 
             <Label Text="Pisac: "
                 HorizontalOptions="Start" FontSize="Medium" Margin="20, 0, 0, 0" />
-            <Entry IsPassword="True" Text="{Binding Pisac}" Margin="20, 0, 20, 0"  Placeholder="Unesite ime i prezime pisca"></Entry>
+            <Entry  Text="{Binding Pisac}" Margin="20, 0, 20, 0"  Placeholder="Unesite ime i prezime pisca"></Entry>
 
             <Button Command="{Binding DodajCommand }" Font="Bold,17" Margin="20, 10, 20, 0" Text="Predloži knjigu" BackgroundColor="DodgerBlue"></Button>
 

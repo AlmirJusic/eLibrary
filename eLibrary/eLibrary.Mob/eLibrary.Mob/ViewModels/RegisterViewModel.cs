@@ -101,18 +101,18 @@ namespace eLibrary.Mob.ViewModels
         public async Task<bool> Validate()
         {
 
-            var result = await _korisnici.Get<List<Korisnik>>(null);
-            foreach (var item in result)
-                if (item.Username == Username )
-                {
-                    await Application.Current.MainPage.DisplayAlert("Greška", "Username je zauzet!", "OK");
-                    return false;
-                }
-                else if (item.Email == Email )
-                {
-                    await Application.Current.MainPage.DisplayAlert("Greška", "Email je zauzet!", "OK");
-                    return false;
-                }
+            //var result = await _korisnici.Get<List<Korisnik>>(null);
+            //foreach (var item in result)
+            //    if (item.Username == Username )
+            //    {
+            //        await Application.Current.MainPage.DisplayAlert("Greška", "Username je zauzet!", "OK");
+            //        return false;
+            //    }
+            //    else if (item.Email == Email )
+            //    {
+            //        await Application.Current.MainPage.DisplayAlert("Greška", "Email je zauzet!", "OK");
+            //        return false;
+            //    }
 
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match match = regex.Match(Email);
