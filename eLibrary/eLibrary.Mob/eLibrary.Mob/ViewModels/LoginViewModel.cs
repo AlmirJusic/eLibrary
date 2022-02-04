@@ -13,11 +13,13 @@ namespace eLibrary.Mob.ViewModels
     public class LoginViewModel : BaseViewModel
     {
         private readonly APIService _korisnici = new APIService("Korisnik");
-        string _username = "korisnik";
+
+        string _username = string.Empty;
+        //string _username = "korisnik";
         public string Username{get { return _username; }set { SetProperty(ref _username, value); }}
 
-        //string _password = string.Empty;
-        string _password = "test";
+        string _password = string.Empty;
+        //string _password = "test";
         public string Password { get { return _password; } set { SetProperty(ref _password, value); } }
 
 
