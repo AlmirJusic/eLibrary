@@ -13,6 +13,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Plugin.FilePicker;
 using eLibrary.Mob.Converters;
+using Plugin.FilePicker.Abstractions;
 
 namespace eLibrary.Mob.Views
 {
@@ -37,20 +38,25 @@ namespace eLibrary.Mob.Views
             
         }
 
+
+
         
-        
-       
 
         private async void slika_clicked(object sender, EventArgs e)
         {
-            var file = await CrossFilePicker.Current.PickFile();
-            string fileName;
-            if (file != null)
-            {
-                fileName = file.FileName;
-                var image = File.ReadAllBytes(fileName);
-                model.Slika = image;
-            }
+            //var file = await CrossFilePicker.Current.PickFile();
+            //string fileName;
+            //if (file != null)
+            //{
+            //    fileName = file.FileName;
+            //    var image = File.ReadAllBytes(fileName);
+            //    model.Slika = image;
+            //}
+            FileData fileData = await CrossFilePicker.Current.PickFile();
+
+            if(fileData!=null)
+                model.Slika = fileData.DataArray;
+
         }
     }
 }
