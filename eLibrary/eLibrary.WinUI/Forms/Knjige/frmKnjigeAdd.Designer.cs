@@ -174,6 +174,7 @@ namespace eLibrary.WinUI.Forms.Knjige
             // cbPDF
             // 
             this.cbPDF.AutoSize = true;
+            this.cbPDF.Enabled = false;
             this.cbPDF.Location = new System.Drawing.Point(308, 349);
             this.cbPDF.Name = "cbPDF";
             this.cbPDF.Size = new System.Drawing.Size(81, 19);

@@ -222,6 +222,12 @@ namespace eLibrary.WinUI.Forms.Knjige
                 }
                 
             }
+            if (cbPDF.Checked == false && pdfFajl == null)
+            {
+                errorProvider1.SetError(cbPDF, "Morate unijeti PDF fajl za knjigu!");
+
+                return false;
+            }
 
             return true;
         }
