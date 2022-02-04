@@ -1,9 +1,9 @@
-version: '3.4'
+version: '5'
 
 services:
 #mssql docker
   elibrary-sql:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
     restart: unless-stopped
     environment:
       - ACCEPT_EULA=Y
@@ -14,14 +14,14 @@ services:
     networks:
       - elibrarynet
 
-  elibrary.api:
+  elibrary-api:
     restart: unless-stopped
     build:
       context: .
     environment:
       - ConnectionStrings:eLibrary=Server=elibrary-sql,1433;Database=IB160088Docker;User=sa;Password=QWElkj132!;ConnectRetryCount=0
     ports:
-      - 5000:5000
+      - 5000:80
     networks:
       - elibrarynet    
     links:
