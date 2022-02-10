@@ -19,7 +19,7 @@ namespace eLibrary.Mob.Services
 
 #if DEBUG
 
-        string _apiURL = "http://localhost:7276/api";
+        string _apiURL = "http://localhost:5000/api";
 #endif
 #if RELEASE
 

@@ -116,7 +116,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob\bin\Debug\netstandard2.0\eLibrary.Mob.dll">
       <PackagePath>eLibrary.Mob.dll</PackagePath>
-      <Modified>2022-02-04T21:00:44.185</Modified>
+      <Modified>2022-02-10T09:18:49.431</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob\bin\Debug\netstandard2.0\eLibrary.ModelForMobile.dll">
       <PackagePath>eLibrary.ModelForMobile.dll</PackagePath>

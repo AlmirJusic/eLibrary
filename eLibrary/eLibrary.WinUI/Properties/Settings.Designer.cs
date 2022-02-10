@@ -25,7 +25,7 @@ namespace eLibrary.WinUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:7276/api")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5000/api")]
         public string ApiURL {
             get {
                 return ((string)(this["ApiURL"]));
