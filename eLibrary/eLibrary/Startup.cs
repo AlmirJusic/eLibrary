@@ -30,8 +30,6 @@ using Microsoft.AspNetCore.Authentication;
 using eLibrary.Security;
 using eLibrary.Model.Requests.KorisnikKnjigaKomentar;
 using eLibrary.Model.Requests.KorisnikKnjigaOcjena;
-using eLibrary.Model.Requests.NacinPlacanja;
-using eLibrary.Model.Requests.Placanje;
 using eLibrary.Model.Requests.KupovinaKnjige;
 using eLibrary.Model.Requests.PrijedlogKnjige;
 

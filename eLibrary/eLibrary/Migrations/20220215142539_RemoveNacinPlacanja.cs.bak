@@ -177,7 +177,7 @@ namespace eLibrary.Migrations
                 keyColumn: "Knjiga_ID",
                 keyValue: 2,
                 column: "DatumIzdavanja",
-                value: new DateTime(2022, 2, 4, 12, 41, 57, 2, DateTimeKind.Local).AddTicks(6908));
+                values: new DateTime(2022, 2, 4, 12, 41, 57, 2, DateTimeKind.Local).AddTicks(6908));
 
             migrationBuilder.UpdateData(
                 table: "Knjiga",

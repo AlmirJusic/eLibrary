@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-02-15T13:39:51.553</Modified>
+      <Modified>2022-02-15T16:06:03.704</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\bin\x86\Debug\eLibrary.Mob.UWP.exe">
       <PackagePath>entrypoint\eLibrary.Mob.UWP.exe</PackagePath>
-      <Modified>2022-02-15T13:39:50.583</Modified>
+      <Modified>2022-02-15T16:06:01.694</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\.nuget\packages\acr.userdialogs\7.1.0.481\lib\uap10.0.16299\Acr.UserDialogs.dll">
       <PackagePath>Acr.UserDialogs.dll</PackagePath>
@@ -116,11 +116,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob\bin\Debug\netstandard2.0\eLibrary.Mob.dll">
       <PackagePath>eLibrary.Mob.dll</PackagePath>
-      <Modified>2022-02-15T13:48:34.014</Modified>
+      <Modified>2022-02-15T16:37:25.133</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob\bin\Debug\netstandard2.0\eLibrary.ModelForMobile.dll">
       <PackagePath>eLibrary.ModelForMobile.dll</PackagePath>
-      <Modified>2022-02-03T20:40:20.498</Modified>
+      <Modified>2022-02-15T16:37:24.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -148,186 +148,186 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\1001noc.jpg">
       <PackagePath>1001noc.jpg</PackagePath>
-      <Modified>2022-02-03T13:02:20.470</Modified>
+      <Modified>2022-02-15T15:59:08.987</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\home.jpg">
       <PackagePath>home.jpg</PackagePath>
-      <Modified>2022-01-27T17:42:12.327</Modified>
+      <Modified>2022-02-15T15:59:09.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\ocjena_full.png">
       <PackagePath>ocjena_full.png</PackagePath>
-      <Modified>2022-02-02T19:09:56.835</Modified>
+      <Modified>2022-02-15T15:59:09.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\ocjena_prazna.png">
       <PackagePath>ocjena_prazna.png</PackagePath>
-      <Modified>2022-02-02T19:09:56.834</Modified>
+      <Modified>2022-02-15T15:59:09.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\pay.png">
       <PackagePath>pay.png</PackagePath>
-      <Modified>2022-02-03T12:47:38.395</Modified>
+      <Modified>2022-02-15T15:59:09.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.799</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.801</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.803</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.804</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.804</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.808</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.810</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.894</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.896</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.897</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.898</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.899</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.900</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.903</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.984</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.985</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.986</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.987</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.988</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.989</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:54:59.990</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:55:00.076</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:55:00.077</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:55:00.078</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:55:00.079</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:55:00.080</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T15:55:00.082</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\xamarin_logo.png">
       <PackagePath>xamarin_logo.png</PackagePath>
-      <Modified>2022-01-27T15:55:00.591</Modified>
+      <Modified>2022-02-15T15:59:09.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\icon_about.png">
       <PackagePath>icon_about.png</PackagePath>
-      <Modified>2022-01-27T15:55:00.574</Modified>
+      <Modified>2022-02-15T15:59:09.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\icon_feed.png">
       <PackagePath>icon_feed.png</PackagePath>
-      <Modified>2022-01-27T15:55:00.574</Modified>
+      <Modified>2022-02-15T15:59:09.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2022-01-27T15:55:00.083</Modified>
+      <Modified>2022-02-15T15:59:09.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\bin\x86\Debug\eLibrary.Mob.UWP.xr.xml">
       <PackagePath>eLibrary.Mob.UWP.xr.xml</PackagePath>
-      <Modified>2022-01-27T15:56:42.493</Modified>
+      <Modified>2022-02-15T16:06:01.614</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-02-15T13:33:06.617</Modified>
+      <Modified>2022-02-15T16:06:01.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-02-15T13:33:06.617</Modified>
+      <Modified>2022-02-15T16:06:01.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -343,11 +343,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-02-15T13:39:50.942</Modified>
+      <Modified>2022-02-15T16:06:02.326</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Almir\source\repos\eLibrary-RS2\eLibrary\eLibrary.Mob\eLibrary.Mob.UWP\bin\x86\Debug\Core\eLibrary.Mob.UWP.exe">
       <PackagePath>eLibrary.Mob.UWP.exe</PackagePath>
-      <Modified>2022-02-15T13:39:51.553</Modified>
+      <Modified>2022-02-15T16:06:03.704</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

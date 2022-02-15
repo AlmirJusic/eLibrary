@@ -15,9 +15,6 @@ namespace eLibrary.ModelForMobile
 
         public int Knjiga_ID { get; set; }
         public virtual Knjiga? Knjiga { get; set; }
-
-        public int NacinPlacanja_ID { get; set; }
-        public virtual NacinPlacanja? NacinPlacanja { get; set; }
         
     }
 }
