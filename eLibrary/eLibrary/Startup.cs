@@ -99,8 +99,6 @@ namespace eLibrary
             services.AddScoped<IKorisnikService, KorisnikService>();
             services.AddScoped<ICRUDService<eLibrary.Model.KorisnikKnjigaKomentar, KorisnikKnjigaKomentarSearchRequest, KorisnikKnjigaKomentarInsertRequest, KorisnikKnjigaKomentarInsertRequest>, KorisnikKnjigaKomentarService>();
             services.AddScoped<ICRUDService<eLibrary.Model.KorisnikKnjigaOcjena, eLibrary.Model.KorisnikKnjigaOcjena, KorisnikKnjigaOcjenaRequest, KorisnikKnjigaOcjenaRequest>, BaseCRUDService<eLibrary.Model.KorisnikKnjigaOcjena, eLibrary.Model.KorisnikKnjigaOcjena, eLibrary.Database.Models.KorisnikKnjigaOcjena, KorisnikKnjigaOcjenaRequest, KorisnikKnjigaOcjenaRequest>>();
-            services.AddScoped<ICRUDService<eLibrary.Model.NacinPlacanja, NacinPlacanjaSearchRequest, NacinPlacanjaInsertRequest, NacinPlacanjaInsertRequest>, NacinPlacanjaService>();
-            services.AddScoped<ICRUDService<eLibrary.Model.Placanje, PlacanjeSearchRequest,PlacanjeInsertRequest, PlacanjeInsertRequest>, PlacanjeService>();
             services.AddScoped<ICRUDService<eLibrary.Model.KupovinaKnjige, KupovinaKnjigeSearchRequest, KupovinaKnjigeInsertRequest, KupovinaKnjigeInsertRequest>, KupovinaKnjigeService>();
             services.AddScoped<ICRUDService<eLibrary.Model.PrijedlogKnjige, PrijedlogKnjigeSearchRequest, PrijedlogKnjigeInsertRequest, PrijedlogKnjigeInsertRequest>, PrijedlogKnjigeService>();
             services.AddScoped<IRecommendedService, RecomendedService>();

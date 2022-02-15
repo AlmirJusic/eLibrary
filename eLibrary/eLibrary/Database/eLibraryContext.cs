@@ -50,8 +50,7 @@ namespace eLibrary.Database
             SeedKorisnikKnjigaKomentar(modelBuilder);
             SeedKorisnikKnjigaOcjena(modelBuilder);
             SeedKupovinaKnjige(modelBuilder);
-            SeedNacinPlacanja(modelBuilder);
-            SeedPlacanje(modelBuilder);
+            
             
     }
         public DbSet<Drzava> Drzava { get; set; }
@@ -66,48 +65,10 @@ namespace eLibrary.Database
         public DbSet<KupovinaKnjige> KupovinaKnjige { get; set; }
         public DbSet<PrijedlogKnjige> PrijedlogKnjige { get; set; }
         public DbSet<Zanr> Zanr { get; set; }
-        public DbSet<NacinPlacanja> NacinPlacanja { get; set; }
-        public DbSet<Placanje> Placanje { get; set; }
+        
 
         
 
-
-        private void SeedPlacanje(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Placanje>().HasData(
-                new Placanje { Placanje_ID=1, NacinPlacanja_ID=2,UkupnaCijena=49.99 },
-                new Placanje 
-                { 
-                    Placanje_ID=2, 
-                    NacinPlacanja_ID=1,
-                    UkupnaCijena=25,
-                    ImePrezime="Almir Jusic",
-                    BrojKreditneKartice = "1234555522223333",
-                    DatumPlacanja=DateTime.Now,
-                    CVV="123"
-                },
-                new Placanje { Placanje_ID = 3, NacinPlacanja_ID = 2, UkupnaCijena = 21.50 },
-                new Placanje
-                {
-                    Placanje_ID = 4,
-                    NacinPlacanja_ID = 1,
-                    UkupnaCijena = 25,
-                    ImePrezime = "Meho Mehic",
-                    BrojKreditneKartice = "1111222233334444",
-                    DatumPlacanja = DateTime.Now,
-                    CVV = "999"
-                }
-                );
-        }
-
-        private void SeedNacinPlacanja(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<NacinPlacanja>().HasData(
-                new NacinPlacanja { NacinPlacanja_ID = 1, Naziv = "Placanje bankovnom karticom." },
-                new NacinPlacanja { NacinPlacanja_ID = 2, Naziv = "PayPal" }
-                );
-                
-        }
 
         private void SeedKupovinaKnjige(ModelBuilder modelBuilder)
         {
