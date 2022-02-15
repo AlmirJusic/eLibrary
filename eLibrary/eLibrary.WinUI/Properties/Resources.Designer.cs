@@ -63,6 +63,16 @@ namespace eLibrary.WinUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap knjiga {
+            get {
+                object obj = ResourceManager.GetObject("knjiga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap old_book_flying_letters_magic_light_background_bookshelf_library_ancient_books_as_symbol_knowledge_history_218640948 {
             get {
                 object obj = ResourceManager.GetObject("old-book-flying-letters-magic-light-background-bookshelf-library-ancient-books-as" +

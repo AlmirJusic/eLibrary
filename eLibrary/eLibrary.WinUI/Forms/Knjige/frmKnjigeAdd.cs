@@ -143,7 +143,7 @@ namespace eLibrary.WinUI.Forms.Knjige
                     if (pbSlika.Image != null)
                         request.Slika = ImageHelper.FromImageToByte(pbSlika.Image);
                     else
-                        request.Slika = ImageHelper.FromImageToByte(eLibrary.WinUI.Properties.Resources.user);
+                        request.Slika = ImageHelper.FromImageToByte(eLibrary.WinUI.Properties.Resources.knjiga);
                     await _knjige.Insert<Model.Knjiga>(request);
                 }
                 MessageBox.Show("Operacija uspješna!");

@@ -22,7 +22,7 @@
 
             <Label Text="Datum rodjenja"
                 HorizontalOptions="Start" FontSize="Medium" Margin="20, 0, 0, 0" />
-            <Entry Text="{Binding DatumRodjenja}" Margin="20, 0, 20, 0"  ></Entry>
+            <DatePicker Date="{Binding DatumRodjenja}" Margin="20, 0, 20, 0" />
 
             <Label Text="Grad"
                    HorizontalOptions="Start" FontSize="Medium" Margin="20, 0, 0, 0" />

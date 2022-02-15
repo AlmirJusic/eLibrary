@@ -167,11 +167,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\1001noc.pdf" />
-    <None Include="Assets\dnevnikanefrank.pdf" />
-    <None Include="Assets\nadrinicuprija.pdf" />
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
